@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Portfolio Bastian Pitois</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Pitois Bastian<span>.R&T</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="missions.html" class="active">Missions</a></li>
+            <li><a href="bilan.html">Bilan Compétences</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh;">
+        <div class="hero-content fade-in">
+            <h1>Mes Missions</h1>
+            <h2>Preuves de compétences</h2>
+            <p>
+                Analyse détaillée de trois situations professionnelles significatives
+                mettant en œuvre les Apprentissages Critiques (AC) du BUT R&T.
+            </p>
+        </div>
+    </header>
+
+    <div class="section-padding">
+        
+        <section id="mission1" class="mission-block reveal">
+            <div class="mission-header">
+                <h3 class="mission-title">Mission 1 : Déploiement Réseau Local</h3>
+                <div class="mission-number">01</div>
+            </div>
+            
+            <div class="mission-details">
+                <div class="mission-left">
+                    <h4>Contexte & Objectifs</h4>
+                    <p>
+                        <strong>Contexte :</strong> Un client professionnel ouvrait de nouveaux bureaux. Il fallait connecter 20 postes de travail et 5 imprimantes au réseau de l'entreprise.
+                        <br><strong>Mon Rôle :</strong> J'ai assisté mon tuteur sur l'installation physique puis réalisé la configuration logicielle seul.
+                    </p>
+                    
+                    <h4 style="margin-top: 20px;">Tâches Réalisées</h4>
+                    <ul style="list-style: square; margin-left: 20px; margin-bottom: 20px;">
+                        <li>Câblage et brassage de la baie informatique.</li>
+                        <li>Configuration des VLANs (Data, Voix, Invité) sur les switchs Cisco.</li>
+                        <li>Test de connectivité et étiquetage des prises.</li>
+                    </ul>
+
+                    <div class="analysis-box">
+                        <h4>Auto-analyse & Progression</h4>
+                        <p>
+                            Cette mission m'a permis de comprendre l'importance de la rigueur dans le brassage. 
+                            J'ai appris à utiliser la CLI (Command Line Interface) en situation réelle.
+                            <br><strong>Difficulté surmontée :</strong> Une erreur de VLAN sur un port trunk, corrigée en analysant les logs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mission-right">
+                    <h4>Compétences Mobilisées</h4>
+                    <div style="margin-bottom: 20px;">
+                        <span class="skill-badge">RT1. Administrer</span>
+                        <span class="skill-badge">RT2. Connecter</span>
+                    </div>
+                    
+                    <h4>Apprentissages Critiques (AC)</h4>
+                    <ul class="ac-list">
+                        <li><span class="ac-code">AC11.03</span> Configurer les fonctions de base du réseau local</li>
+                        <li><span class="ac-code">AC11.05</span> Identifier les dysfonctionnements</li>
+                        <li><span class="ac-code">AC12.03</span> Déployer des supports de transmission</li>
+                    </ul>
+
+                    <h4 style="margin-top: 30px;">Preuves / Traces</h4>
+                    <img src="https://via.placeholder.com/300x200?text=Plan+Adressage" alt="Plan adressage" style="width:100%; margin-bottom:10px; border:1px solid #ccc;">
+                    <p style="font-size: 0.8rem; color: #666;">Extrait du plan d'adressage IP réalisé.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission2" class="mission-block reveal">
+            <div class="mission-header">
+                <h3 class="mission-title">Mission 2 : Supervision (Monitoring)</h3>
+                <div class="mission-number">02</div>
+            </div>
+            
+            <div class="mission-details">
+                <div class="mission-left">
+                    <h4>Contexte & Objectifs</h4>
+                    <p>
+                        <strong>Contexte :</strong> L'équipe avait besoin de visibilité sur la charge des liens inter-sites.
+                        <br><strong>Objectif :</strong> Installer une sonde de supervision pour remonter les alertes en cas de saturation.
+                    </p>
+                    
+                    <h4 style="margin-top: 20px;">Actions</h4>
+                    <p>Installation d'un serveur Linux (Debian) et configuration de l'outil Nagios/Centreon. Création des scripts de remontée d'alerte SNMP.</p>
+                    
+                    <div class="analysis-box">
+                        <h4>Auto-analyse</h4>
+                        <p>
+                            J'ai développé mes compétences système (Linux) et compris le protocole SNMP. 
+                            C'était ma première mission en autonomie quasi-totale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mission-right">
+                    <h4>Compétences Mobilisées</h4>
+                    <div style="margin-bottom: 20px;">
+                        <span class="skill-badge">RT1. Administrer</span>
+                        <span class="skill-badge">Scripting</span>
+                    </div>
+                    <ul class="ac-list">
+                        <li><span class="ac-code">AC21.04</span> Déployer des services réseaux avancés</li>
+                        <li><span class="ac-code">AC23.01</span> Automatiser l'administration avec des scripts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission3" class="mission-block reveal" style="border-bottom: none;">
+            <div class="mission-header">
+                <h3 class="mission-title">Mission 3 : Sécurisation VPN</h3>
+                <div class="mission-number">03</div>
+            </div>
+            
+            <div class="mission-details">
+                <div class="mission-left">
+                    <h4>Contexte & Objectifs</h4>
+                    <p>
+                        <strong>Contexte :</strong> Sécuriser l'accès distant pour les télétravailleurs d'une agence comptable.
+                        <br><strong>Solution :</strong> Mise en place d'un tunnel VPN IPsec.
+                    </p>
+                    
+                    <div class="analysis-box">
+                        <h4>Auto-analyse</h4>
+                        <p>
+                            Mission complexe touchant à la Cybersécurité. J'ai dû me documenter (en anglais) sur les protocoles de chiffrement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mission-right">
+                    <h4>Compétences Mobilisées</h4>
+                    <div style="margin-bottom: 20px;">
+                        <span class="skill-badge">Cyber1. Administrer Sécurisé</span>
+                    </div>
+                    <ul class="ac-list">
+                        <li><span class="ac-code">AC22.02</span> Mettre en place un accès distant sécurisé</li>
+                        <li><span class="ac-code">AC24.04</span> Choisir les outils cryptographiques</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Portfolio Bastian Pitois</p>
+    </footer>
+
+</body>
+</html>

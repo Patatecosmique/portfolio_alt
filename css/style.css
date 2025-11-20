@@ -1,11 +1,13 @@
-/* --- Variables de couleurs (Facile à changer) --- */
+/* --- CHARTE GRAPHIQUE ORANGE (Style.css - V2 Complet) --- */
+
+/* --- Variables Orange Brand --- */
 :root {
-    --primary-color: #0056b3; /* Bleu professionnel (IUT/Tech) */
-    --secondary-color: #f4f4f9; /* Gris très clair pour le fond */
-    --text-dark: #333333;
-    --text-light: #666666;
-    --white: #ffffff;
-    --accent: #00a8cc; /* Un bleu cyan pour dynamiser */
+    --orange-brand: #FF7900; /* L'Orange officiel */
+    --black: #000000;
+    --dark-grey: #333333;
+    --light-grey: #F4F4F4;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* --- Reset général --- */
@@ -16,9 +18,9 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-dark);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -26,108 +28,98 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
-/* --- Navigation --- */
+ul {
+    list-style: none;
+}
+
+/* --- Navigation (Barre Noire) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--white);
-    padding: 1rem 5%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: var(--black);
+    padding: 0 5%;
+    height: 80px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid var(--orange-brand);
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
 }
 
 .logo span {
-    color: var(--accent);
+    color: var(--orange-brand);
 }
 
 .nav-links {
     display: flex;
-    list-style: none;
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .nav-links a {
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--orange-brand);
 }
 
-/* Burger Menu (Mobile) */
-.burger {
-    display: none;
-    cursor: pointer;
-}
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-dark);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
+.burger { display: none; cursor: pointer; }
+.burger div { width: 25px; height: 3px; background-color: var(--white); margin: 5px; transition: all 0.3s ease; }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Commune) --- */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5% 10%;
+    padding: 60px 10%;
     background-color: var(--white);
-    min-height: 80vh;
+    min-height: 60vh; /* Plus court pour les pages internes */
+    border-bottom: 1px solid #ddd;
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 60px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
 }
 
 .hero h2 {
-    font-size: 1.5rem;
-    color: var(--accent);
+    font-size: 1.3rem;
+    color: var(--orange-brand);
+    font-weight: 600;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .hero p {
     margin-bottom: 30px;
-    color: var(--text-light);
+    color: var(--dark-grey);
     font-size: 1.1rem;
-}
-
-.btn-primary {
-    padding: 12px 30px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #004494;
-    transform: translateY(-3px);
+    max-width: 600px;
 }
 
 .hero-image {
@@ -137,136 +129,166 @@ a {
 }
 
 .hero-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%; /* Photo ronde */
-    border: 5px solid var(--secondary-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 15px 15px 0px var(--light-grey);
 }
 
-/* --- Section About --- */
-.section-padding {
-    padding: 80px 10%;
+/* --- Boutons --- */
+.btn-primary, .btn-orange {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--orange-brand);
+    color: var(--white);
+    font-weight: 700;
+    border: 2px solid var(--orange-brand);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
-.about {
-    background-color: var(--secondary-color);
-    text-align: center;
+.btn-primary:hover, .btn-orange:hover {
+    background-color: var(--black);
+    border-color: var(--black);
 }
 
-.about h3 {
+/* --- Sections Générales --- */
+.section-padding { padding: 80px 10%; }
+.bg-light { background-color: var(--light-grey); }
+.bg-white { background-color: var(--white); }
+
+h3.section-title {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+    margin-bottom: 40px;
+    color: var(--black);
+    font-weight: 700;
+    border-left: 5px solid var(--orange-brand);
+    padding-left: 15px;
 }
 
-.cards-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    gap: 20px;
+/* --- Spécifique Page Entreprise --- */
+.company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
 }
 
-.card {
+.info-box {
     background: var(--white);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    flex: 1;
-    transition: transform 0.3s;
+    border-left: 4px solid var(--black);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.info-box h4 {
+    color: var(--orange-brand);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
-.card h4 {
+/* --- Spécifique Page Missions --- */
+.mission-block {
+    margin-bottom: 100px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mission-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.mission-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #eee;
+    line-height: 1;
+}
+
+.mission-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Badges de compétences (AC) */
+.skill-badge {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.ac-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.ac-code {
+    color: var(--orange-brand);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Bloc Analyse Réflexive */
+.analysis-box {
+    background-color: #fff3e0; /* Orange très pâle */
+    padding: 30px;
+    border-left: 5px solid var(--orange-brand);
+    margin-top: 30px;
+}
+
+.analysis-box h4 {
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--black);
 }
 
 /* --- Footer --- */
 footer {
-    background-color: var(--text-dark);
+    background-color: var(--black);
     color: var(--white);
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     margin-top: auto;
 }
 
-/* --- Animations --- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- Responsive (Mobile) --- */
+/* --- Responsive --- */
 @media screen and (max-width: 768px) {
+    .navbar { padding: 0 20px; }
     .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: var(--white);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        position: absolute; right: 0; height: 92vh; top: 80px;
+        background-color: var(--black); flex-direction: column;
+        width: 100%; transform: translateX(100%); transition: transform 0.4s ease-in;
+        padding-top: 50px;
     }
-
-    .nav-links li {
-        opacity: 0;
-        margin: 30px 0;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .nav-active {
-        transform: translateX(0%);
-    }
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .hero-content {
-        padding-right: 0;
-        margin-top: 30px;
-    }
+    .nav-links li { margin: 20px 0; }
+    .burger { display: block; }
+    .nav-active { transform: translateX(0%); }
     
-    .cards-container {
-        flex-direction: column;
-    }
+    .hero { flex-direction: column-reverse; padding: 40px 20px; text-align: center; }
+    .hero-content { padding-right: 0; margin-top: 40px; }
+    .company-grid, .mission-details { grid-template-columns: 1fr; }
+    .mission-header { flex-direction: column-reverse; align-items: flex-start; }
+    .mission-number { font-size: 3rem; margin-bottom: 10px; }
 }
 
-@keyframes navLinkFade {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
+/* --- Animations --- */
+.fade-in { animation: fadeIn 1s ease-out; }
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
