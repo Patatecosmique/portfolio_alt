@@ -222,15 +222,17 @@ h3.section-title::after {
 .info-box {
     background: var(--white);
     padding: 30px;
-    /* Bordure gauche noire par défaut, changera selon contexte */
-    border-left: 4px solid var(--black); 
+    
+    /* MODIFICATION ICI : On change var(--black) en var(--orange-brand) */
+    border-left: 4px solid var(--orange-brand); 
+    
     box-shadow: var(--shadow);
-    margin-bottom: 0; /* Géré par le gap de la grille */
+    margin-bottom: 0;
     border-radius: 4px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Variante avec bordure Orange (demandée dans le HTML) */
+/* Variante avec bordure Orange */
 .info-box.border-orange {
     border-left-color: var(--orange-brand);
 }
@@ -260,32 +262,96 @@ h3.section-title::after {
     margin: 20px auto;
 }
 
-/* 5. Section UCI (Carte + Texte) */
+/* 5. Section UCI (Carte + Texte) - DESIGN HARMONISÉ */
 .uci-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
-.uci-header h2 { font-size: 2.2rem; color: var(--black); margin-bottom: 5px;}
-.uci-header h3 { font-weight: 300; color: var(--mid-grey); font-size: 1.2rem; }
+
+.uci-header h2 { 
+    font-size: 2.5rem; 
+    color: var(--black); 
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.uci-header h3 { 
+    font-weight: 300; 
+    color: var(--mid-grey); 
+    font-size: 1.3rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 .mission-details-container {
     display: flex;
+    align-items: center; /* Centre verticalement texte et image */
+    gap: 60px;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 50px;
 }
 
-.mission-text { flex: 1; min-width: 300px; }
-.mission-image { flex: 1; min-width: 300px; text-align: center; }
+/* Le bloc de texte devient une "carte" stylisée */
+.mission-text { 
+    flex: 1; 
+    min-width: 300px;
+    background-color: var(--white);
+    padding: 30px;
+    /* La fameuse barre orange à gauche pour harmoniser */
+    border-left: 5px solid var(--orange-brand); 
+    box-shadow: var(--shadow); /* Même ombre que les autres boîtes */
+    border-radius: 0 4px 4px 0;
+}
+
+.intro-uci {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-grey);
+    margin-bottom: 25px;
+}
+
+/* Stylisation de la liste à puces */
+.uci-list { 
+    margin: 0; 
+    padding: 0;
+    list-style: none; /* On retire les puces par défaut */
+}
+
+.uci-list li { 
+    margin-bottom: 12px; 
+    font-size: 1.05rem; 
+    color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+/* Création de puces carrées Orange personnalisées */
+.uci-list li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--orange-brand);
+    margin-right: 15px;
+}
+
+.mission-image { 
+    flex: 1; 
+    min-width: 300px; 
+    display: flex;
+    justify-content: center;
+}
 
 .mission-image img {
     max-width: 100%;
     border-radius: 4px;
-    box-shadow: var(--shadow);
+    /* Ombre un peu plus marquée pour détacher la carte/image */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease;
 }
 
-.uci-list { margin-top: 20px; padding-left: 15px; }
-.uci-list li { margin-bottom: 8px; list-style-type: square; color: var(--dark-grey); }
+.mission-image img:hover {
+    transform: scale(1.02); /* Léger zoom au survol */
+}
 
 /* 6. Section Statistiques (Chiffres Clés) */
 .stats-grid {
@@ -310,34 +376,65 @@ h3.section-title::after {
 .stat-label { color: var(--orange-brand); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
 .stat-desc { font-size: 0.85rem; color: var(--mid-grey); margin-top: 5px; }
 
-/* 7. Section Missions Finales (Liste) */
+/* 7. Section Missions Finales (Cartes espacées) */
 .strategic-block { margin-bottom: 50px; }
+
 .strategic-block h4 { 
     font-size: 1.5rem; 
-    margin-bottom: 25px; 
+    margin-bottom: 30px; 
     color: var(--black);
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
     display: inline-block;
 }
 
+/* La grille qui contient les cartes */
 .missions-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    /* Création automatique de colonnes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    /* MODIFICATION ICI : Écartement augmenté à 60px */
+    gap: 60px; 
 }
 
+/* Le style de chaque carte "Mission" */
 .mission-item {
-    background: #fff; /* Fond blanc */
-    padding: 20px;
-    border-left: 4px solid var(--dark-grey); /* Bordure grise */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    font-size: 0.95rem;
-    color: var(--dark-grey);
+    background: var(--white);
+    padding: 25px;
+    
+    /* La barre Orange à gauche */
+    border-left: 5px solid var(--orange-brand); 
+    
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.mission-item strong { color: var(--orange-brand); }
+.mission-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
 
+/* Titre de la mission (en Noir) */
+.mission-item strong {
+    display: block;
+    font-size: 1.15rem;
+    color: var(--black);
+    margin-bottom: 15px; /* Un peu plus d'espace sous le titre aussi */
+    font-weight: 700;
+}
+
+/* Texte de la mission */
+.mission-item {
+    color: var(--mid-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
 /* ==========================================================================
    --- AUTRES PAGES (Conservé pour compatibilité) ---
