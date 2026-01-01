@@ -1,13 +1,14 @@
-/* --- CHARTE GRAPHIQUE ORANGE (Style.css - V2 Complet) --- */
+/* --- CHARTE GRAPHIQUE ORANGE (Style.css - V3 Harmonisé) --- */
 
 /* --- Variables Orange Brand --- */
 :root {
     --orange-brand: #FF7900; /* L'Orange officiel */
     --black: #000000;
     --dark-grey: #333333;
-    --light-grey: #F4F4F4;
+    --mid-grey: #666666;
+    --light-grey: #FAFAFA; /* Modifié pour être plus doux (presque blanc) */
     --white: #FFFFFF;
-    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow: 0 5px 15px rgba(0,0,0,0.08); /* Ombre plus douce */
 }
 
 /* --- Reset général --- */
@@ -89,8 +90,8 @@ ul {
     justify-content: space-between;
     padding: 60px 10%;
     background-color: var(--white);
-    min-height: 60vh; /* Plus court pour les pages internes */
-    border-bottom: 1px solid #ddd;
+    min-height: 50vh;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .hero-content {
@@ -99,18 +100,18 @@ ul {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--black);
     line-height: 1.1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: -1px;
 }
 
 .hero h2 {
     font-size: 1.3rem;
-    color: var(--orange-brand);
-    font-weight: 600;
+    color: var(--mid-grey); /* Plus doux que l'orange vif pour le sous-titre */
+    font-weight: 300;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -128,12 +129,13 @@ ul {
     justify-content: center;
 }
 
+/* Modification Logo pour harmonie */
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 220px; /* Taille maîtrisée */
     height: auto;
     border-radius: 0;
-    box-shadow: 15px 15px 0px var(--light-grey);
+    box-shadow: none; /* Pas d'ombre sur un logo SVG/PNG */
 }
 
 /* --- Boutons --- */
@@ -147,6 +149,7 @@ ul {
     text-transform: uppercase;
     font-size: 0.9rem;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .btn-primary:hover, .btn-orange:hover {
@@ -156,46 +159,189 @@ ul {
 
 /* --- Sections Générales --- */
 .section-padding { padding: 80px 10%; }
-.bg-light { background-color: var(--light-grey); }
+.bg-light { background-color: var(--light-grey); } /* Très doux (#FAFAFA) */
 .bg-white { background-color: var(--white); }
 
 h3.section-title {
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     color: var(--black);
     font-weight: 700;
-    border-left: 5px solid var(--orange-brand);
-    padding-left: 15px;
+    /* On remplace la bordure latérale par un soulignement plus élégant */
+    border-left: none; 
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+}
+
+h3.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--orange-brand);
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 
+/* ==========================================================================
+   --- SECTION DÉDIÉE : PAGE ENTREPRISE (Harmonisation) ---
+   ========================================================================== */
 
+/* 1. Typographie & Textes */
+.subtitle-brand {
+    font-size: 1.1rem;
+    color: var(--orange-brand);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
 
+.text-content {
+    color: var(--dark-grey);
+    max-width: 800px;
+    margin-bottom: 40px;
+}
 
-
-
-
-/* --- Spécifique Page Entreprise --- */
+/* 2. Grilles Principales (Opérateurs) */
 .company-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
 }
 
+/* Pour le bloc stratégique à 3 colonnes */
+.company-grid.three-cols {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* 3. Style des Cartes (Info Box) - Unifié */
 .info-box {
     background: var(--white);
     padding: 30px;
-    border-left: 4px solid var(--black);
+    /* Bordure gauche noire par défaut, changera selon contexte */
+    border-left: 4px solid var(--black); 
     box-shadow: var(--shadow);
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Géré par le gap de la grille */
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.info-box h4 {
-    color: var(--orange-brand);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+/* Variante avec bordure Orange (demandée dans le HTML) */
+.info-box.border-orange {
+    border-left-color: var(--orange-brand);
 }
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.info-box h4, .info-box h5 {
+    color: var(--black);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.info-box p {
+    font-size: 0.95rem;
+    color: var(--mid-grey);
+}
+
+/* 4. Séparateur */
+.separator-orange {
+    height: 4px;
+    width: 60px;
+    background-color: var(--orange-brand);
+    margin: 20px auto;
+}
+
+/* 5. Section UCI (Carte + Texte) */
+.uci-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.uci-header h2 { font-size: 2.2rem; color: var(--black); margin-bottom: 5px;}
+.uci-header h3 { font-weight: 300; color: var(--mid-grey); font-size: 1.2rem; }
+
+.mission-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.mission-text { flex: 1; min-width: 300px; }
+.mission-image { flex: 1; min-width: 300px; text-align: center; }
+
+.mission-image img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.uci-list { margin-top: 20px; padding-left: 15px; }
+.uci-list li { margin-bottom: 8px; list-style-type: square; color: var(--dark-grey); }
+
+/* 6. Section Statistiques (Chiffres Clés) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-box {
+    background: var(--white);
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 4px solid var(--orange-brand); /* Touche orange en haut */
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover { transform: translateY(-3px); }
+
+.stat-num { font-size: 2.5rem; font-weight: 800; color: var(--black); line-height: 1.2; margin-bottom: 5px; }
+.stat-label { color: var(--orange-brand); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
+.stat-desc { font-size: 0.85rem; color: var(--mid-grey); margin-top: 5px; }
+
+/* 7. Section Missions Finales (Liste) */
+.strategic-block { margin-bottom: 50px; }
+.strategic-block h4 { 
+    font-size: 1.5rem; 
+    margin-bottom: 25px; 
+    color: var(--black);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+}
+
+.missions-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.mission-item {
+    background: #fff; /* Fond blanc */
+    padding: 20px;
+    border-left: 4px solid var(--dark-grey); /* Bordure grise */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    color: var(--dark-grey);
+}
+
+.mission-item strong { color: var(--orange-brand); }
+
+
+/* ==========================================================================
+   --- AUTRES PAGES (Conservé pour compatibilité) ---
+   ========================================================================== */
 
 /* --- Spécifique Page Missions --- */
 .mission-block {
@@ -203,33 +349,15 @@ h3.section-title {
     padding-bottom: 60px;
     border-bottom: 1px solid #ddd;
 }
-
 .mission-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
-
-.mission-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-}
-
-.mission-number {
-    font-size: 4rem;
-    font-weight: 900;
-    color: #eee;
-    line-height: 1;
-}
-
-.mission-details {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-}
-
-/* Badges de compétences (AC) */
+.mission-title { font-size: 2.2rem; font-weight: 700; }
+.mission-number { font-size: 4rem; font-weight: 900; color: #eee; line-height: 1; }
+.mission-details { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
 .skill-badge {
     display: inline-block;
     background-color: var(--black);
@@ -240,30 +368,15 @@ h3.section-title {
     margin-right: 5px;
     margin-bottom: 5px;
 }
-
-.ac-list li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-}
-
-.ac-code {
-    color: var(--orange-brand);
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-/* Bloc Analyse Réflexive */
+.ac-list li { margin-bottom: 10px; font-size: 0.95rem; }
+.ac-code { color: var(--orange-brand); font-weight: bold; margin-right: 5px; }
 .analysis-box {
-    background-color: #fff3e0; /* Orange très pâle */
+    background-color: #fffaf0; /* Très pâle orange */
     padding: 30px;
     border-left: 5px solid var(--orange-brand);
     margin-top: 30px;
 }
-
-.analysis-box h4 {
-    margin-bottom: 15px;
-    color: var(--black);
-}
+.analysis-box h4 { margin-bottom: 15px; color: var(--black); }
 
 /* --- Footer --- */
 footer {
@@ -274,34 +387,27 @@ footer {
     margin-top: auto;
 }
 
-/* --- SECTION A PROPOS (Style "Bento Static") --- */
-
+/* --- SECTION A PROPOS (Bento) --- */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 20px;
 }
-
-/* Style commun des boîtes */
 .bento-item {
     background-color: var(--white);
     padding: 25px;
-    border-radius: 8px; /* Rayon un peu plus petit pour faire plus "sérieux" */
-    border: 1px solid #e0e0e0; /* Bordure fine grise pour la structure */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Transition uniquement sur la couleur de bordure et l'ombre (pas de mouvement) */
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
-/* Au survol : Juste une ombre un peu plus marquée et une bordure orange subtile */
 .bento-item:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border-color: rgba(255, 121, 0, 0.3); 
 }
-
 .bento-item h4 {
     color: var(--orange-brand);
     margin-bottom: 15px;
@@ -310,183 +416,54 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
-/* --- Spécificités des blocs --- */
-
-/* Bloc 1 : Bio */
-.main-bio {
-    grid-column: span 2;
-    grid-row: span 2;
-    justify-content: flex-start;
-}
-
-.main-bio p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--dark-grey);
-}
-
-/* Bloc 2 : Statut (Fond Noir) */
-.status-card {
-    background-color: var(--black);
-    color: var(--white);
-    border: 1px solid var(--black);
-}
-
-/* On change le comportement au survol pour le bloc noir */
-.status-card:hover {
-    border-color: var(--black);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.bento-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.status-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 5px;
-}
-
-.status-content h5 {
-    font-size: 1.1rem;
-    margin: 0;
-    font-weight: bold;
-    color: var(--white);
-}
-
-
-/* Petit bouton LinkedIn dans le bloc noir */
+.main-bio { grid-column: span 2; grid-row: span 2; justify-content: flex-start; }
+.main-bio p { font-size: 1rem; line-height: 1.6; color: var(--dark-grey); }
+.status-card { background-color: var(--black); color: var(--white); border: 1px solid var(--black); }
+.status-card:hover { border-color: var(--black); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.bento-label { font-size: 0.75rem; text-transform: uppercase; color: #999; margin-bottom: 8px; letter-spacing: 1px; }
+.status-content { display: flex; align-items: center; gap: 12px; margin-bottom: 5px; }
+.status-content h5 { font-size: 1.1rem; margin: 0; font-weight: bold; color: var(--white); }
 .linkedin-icon-link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-    background: rgba(255, 255, 255, 0.2); /* Fond blanc transparent */
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.3s;
+    position: absolute; top: 20px; right: 20px; color: white;
+    font-weight: bold; font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.2); width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px; text-decoration: none; transition: background 0.3s;
 }
-
-.linkedin-icon-link:hover {
-    background: #0077b5; /* Bleu LinkedIn au survol */
-}
-
-
-
-/* Point vert fixe (Pas d'animation) */
+.linkedin-icon-link:hover { background: #0077b5; }
 .status-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #4CAF50; /* Vert Validé */
-    border-radius: 50%;
-    display: inline-block;
-    
-    /* L'animation de "battement" */
-    box-shadow: 0 0 0 rgba(76, 175, 80, 0.4);
-    animation: pulse-green 2s infinite;;
+    width: 10px; height: 10px; background-color: #4CAF50; border-radius: 50%;
+    display: inline-block; box-shadow: 0 0 0 rgba(76, 175, 80, 0.4);
+    animation: pulse-green 2s infinite;
 }
-
-/* Les étapes de l'animation */
 @keyframes pulse-green {
-    0% {
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); /* L'ombre s'étend et disparait */
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
 }
-
-.small-text {
-    font-size: 0.85rem;
-    color: #bbb;
-    line-height: 1.4;
-}
-
-/* Bloc 3 : Tags */
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-}
-
+.small-text { font-size: 0.85rem; color: #bbb; line-height: 1.4; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; }
 .tag-cloud li {
-    background: var(--light-grey);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--dark-grey);
-    border: 1px solid transparent;
+    background: var(--light-grey); padding: 6px 12px;
+    border-radius: 4px; font-size: 0.85rem; font-weight: 600;
+    color: var(--dark-grey); border: 1px solid transparent;
 }
-
-/* Bloc 5 : CV (Fond Orange) */
 .cv-box {
-    background-color: var(--orange-brand);
-    color: var(--white);
-    border: 1px solid var(--orange-brand);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    background-color: var(--orange-brand); color: var(--white);
+    border: 1px solid var(--orange-brand); flex-direction: row;
+    justify-content: space-between; align-items: center; cursor: pointer;
 }
-
-.cv-box:hover {
-    background-color: #e66d00; /* Orange légèrement plus foncé au survol */
-    border-color: #e66d00;
-}
-
-.cv-box h4 { color: var(--white); } /* Force le titre en blanc si besoin */
-
-.cv-content {
-    font-weight: bold;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--white);
-}
-
-.arrow-icon {
-    font-size: 1.2rem;
-    color: var(--white);
-}
-
-
-
-
+.cv-box:hover { background-color: #e66d00; border-color: #e66d00; }
+.cv-box h4 { color: var(--white); }
+.cv-content { font-weight: bold; font-size: 1rem; display: flex; align-items: center; gap: 10px; color: var(--white); }
+.arrow-icon { font-size: 1.2rem; color: var(--white); }
 
 /* --- RESPONSIVE MOBILE --- */
 @media screen and (max-width: 900px) {
-    .bento-grid {
-        grid-template-columns: 1fr; /* Tout en une seule colonne */
-        grid-template-rows: auto;
-    }
-
-    .main-bio {
-        grid-column: span 1;
-        grid-row: auto;
-    }
+    .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .main-bio { grid-column: span 1; grid-row: auto; }
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 768px) {
     .navbar { padding: 0 20px; }
     .nav-links {
@@ -501,7 +478,7 @@ footer {
     
     .hero { flex-direction: column-reverse; padding: 40px 20px; text-align: center; }
     .hero-content { padding-right: 0; margin-top: 40px; }
-    .company-grid, .mission-details { grid-template-columns: 1fr; }
+    .company-grid, .mission-details, .mission-details-container { grid-template-columns: 1fr; flex-direction: column; }
     .mission-header { flex-direction: column-reverse; align-items: flex-start; }
     .mission-number { font-size: 3rem; margin-bottom: 10px; }
 }
@@ -511,5 +488,3 @@ footer {
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-
