@@ -168,6 +168,13 @@ h3.section-title {
     padding-left: 15px;
 }
 
+
+
+
+
+
+
+
 /* --- Spécifique Page Entreprise --- */
 .company-grid {
     display: grid;
@@ -267,6 +274,171 @@ footer {
     margin-top: auto;
 }
 
+/* --- SECTION A PROPOS (Style "Bento Static") --- */
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+/* Style commun des boîtes */
+.bento-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px; /* Rayon un peu plus petit pour faire plus "sérieux" */
+    border: 1px solid #e0e0e0; /* Bordure fine grise pour la structure */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Transition uniquement sur la couleur de bordure et l'ombre (pas de mouvement) */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Au survol : Juste une ombre un peu plus marquée et une bordure orange subtile */
+.bento-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: rgba(255, 121, 0, 0.3); 
+}
+
+.bento-item h4 {
+    color: var(--orange-brand);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Spécificités des blocs --- */
+
+/* Bloc 1 : Bio */
+.main-bio {
+    grid-column: span 2;
+    grid-row: span 2;
+    justify-content: flex-start;
+}
+
+.main-bio p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+/* Bloc 2 : Statut (Fond Noir) */
+.status-card {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+/* On change le comportement au survol pour le bloc noir */
+.status-card:hover {
+    border-color: var(--black);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.bento-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.status-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.status-content h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Point vert fixe (Pas d'animation) */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50; /* Vert statut */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* Bloc 3 : Tags */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+}
+
+.tag-cloud li {
+    background: var(--light-grey);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    border: 1px solid transparent;
+}
+
+/* Bloc 5 : CV (Fond Orange) */
+.cv-box {
+    background-color: var(--orange-brand);
+    color: var(--white);
+    border: 1px solid var(--orange-brand);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cv-box:hover {
+    background-color: #e66d00; /* Orange légèrement plus foncé au survol */
+    border-color: #e66d00;
+}
+
+.cv-box h4 { color: var(--white); } /* Force le titre en blanc si besoin */
+
+.cv-content {
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media screen and (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Tout en une seule colonne */
+        grid-template-rows: auto;
+    }
+
+    .main-bio {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+}
+
 /* --- Responsive --- */
 @media screen and (max-width: 768px) {
     .navbar { padding: 0 20px; }
@@ -292,3 +464,5 @@ footer {
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+
