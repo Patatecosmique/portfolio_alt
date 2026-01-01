@@ -361,13 +361,56 @@ footer {
     color: var(--white);
 }
 
+
+/* Petit bouton LinkedIn dans le bloc noir */
+.linkedin-icon-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.2); /* Fond blanc transparent */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.linkedin-icon-link:hover {
+    background: #0077b5; /* Bleu LinkedIn au survol */
+}
+
+
+
 /* Point vert fixe (Pas d'animation) */
 .status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #4CAF50; /* Vert statut */
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50; /* Vert Validé */
     border-radius: 50%;
     display: inline-block;
+    
+    /* L'animation de "battement" */
+    box-shadow: 0 0 0 rgba(76, 175, 80, 0.4);
+    animation: pulse-green 2s infinite;;
+}
+
+/* Les étapes de l'animation */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); /* L'ombre s'étend et disparait */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
 }
 
 .small-text {
@@ -425,6 +468,10 @@ footer {
     font-size: 1.2rem;
     color: var(--white);
 }
+
+
+
+
 
 /* --- RESPONSIVE MOBILE --- */
 @media screen and (max-width: 900px) {
