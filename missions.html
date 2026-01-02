@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -36,56 +38,96 @@
     </header>
 
     <div class="section-padding">
-        
-        <section id="mission1" class="mission-block reveal">
-            <div class="mission-header">
-                <h3 class="mission-title">Mission 1 : Déploiement Réseau Local</h3>
-                <div class="mission-number">01</div>
-            </div>
-            
-            <div class="mission-details">
-                <div class="mission-left">
-                    <h4>Contexte & Objectifs</h4>
-                    <p>
-                        <strong>Contexte :</strong> Un client professionnel ouvrait de nouveaux bureaux. Il fallait connecter 20 postes de travail et 5 imprimantes au réseau de l'entreprise.
-                        <br><strong>Mon Rôle :</strong> J'ai assisté mon tuteur sur l'installation physique puis réalisé la configuration logicielle seul.
-                    </p>
-                    
-                    <h4 style="margin-top: 20px;">Tâches Réalisées</h4>
-                    <ul style="list-style: square; margin-left: 20px; margin-bottom: 20px;">
-                        <li>Câblage et brassage de la baie informatique.</li>
-                        <li>Configuration des VLANs (Data, Voix, Invité) sur les switchs Cisco.</li>
-                        <li>Test de connectivité et étiquetage des prises.</li>
-                    </ul>
 
-                    <div class="analysis-box">
-                        <h4>Auto-analyse & Progression</h4>
+        <section id="mission1" class="mission-modern reveal">
+            <div class="mission-header-modern">
+                <div>
+                    <span class="mission-label">Mission 01</span>
+                    <h3 class="mission-title-large">Raccordement public pour un logement neuf</h3>
+                </div>
+            </div>
+
+            <div class="mission-layout-grid">
+
+                <div class="mission-content-main">
+
+                    <div class="content-block">
+                        <h4 class="modern-heading">Contexte & Objectifs</h4>
                         <p>
-                            Cette mission m'a permis de comprendre l'importance de la rigueur dans le brassage. 
-                            J'ai appris à utiliser la CLI (Command Line Interface) en situation réelle.
-                            <br><strong>Difficulté surmontée :</strong> Une erreur de VLAN sur un port trunk, corrigée en analysant les logs.
+                            <strong>Contexte :</strong> Un promoteur immobilier (Sagir Promotion) lance la construction
+                            d'un
+                            lotisement de 7 maisons à Saint Paterne le Chevain.
+                            <br><strong>Mon Rôle :</strong> Mon tuteur m'a confié la mission de réaliser le raccordement
+                            public pour ce lotisement neuf.
                         </p>
                     </div>
-                </div>
 
-                <div class="mission-right">
-                    <h4>Compétences Mobilisées</h4>
-                    <div style="margin-bottom: 20px;">
-                        <span class="skill-badge">RT1. Administrer</span>
-                        <span class="skill-badge">RT2. Connecter</span>
+                    <div class="content-block">
+                        <h4 class="modern-heading">Tâches Réalisées</h4>
+                        <ul class="timeline-list">
+                            <li>Réalisation de l'Étude (analyse du réseau existant).</li>
+                            <li>Création du plan de situation et du plan Projet et autres.</li>
+                            <li>Valorisation financière des travaux de raccordement.</li>
+                            <li>Envoi des documents réalisés aux prestataires pour travaux.</li>
+                            <li>Suivi du chantier et réception (analyse du retour travaux).</li>
+                            <li>Clôture administrative et paiement du prestataire.</li>
+                        </ul>
                     </div>
-                    
-                    <h4>Apprentissages Critiques (AC)</h4>
-                    <ul class="ac-list">
-                        <li><span class="ac-code">AC11.03</span> Configurer les fonctions de base du réseau local</li>
-                        <li><span class="ac-code">AC11.05</span> Identifier les dysfonctionnements</li>
-                        <li><span class="ac-code">AC12.03</span> Déployer des supports de transmission</li>
-                    </ul>
 
-                    <h4 style="margin-top: 30px;">Preuves / Traces</h4>
-                    <img src="https://via.placeholder.com/300x200?text=Plan+Adressage" alt="Plan adressage" style="width:100%; margin-bottom:10px; border:1px solid #ccc;">
-                    <p style="font-size: 0.8rem; color: #666;">Extrait du plan d'adressage IP réalisé.</p>
+                    <div class="content-block">
+                        <h4 class="modern-heading">Preuves / Traces</h4>
+                        <div class="proof-container">
+                            <img src="img/capture_plan_projet.jpg" alt="Plan Projet Raccordement">
+                            <p class="caption">Extrait du plan Projet réalisé pour le lotisement.</p>
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <div class="analysis-text">
+                            <h4>Auto-analyse & Progression</h4>
+                            <p>
+                                Cette mission m'a permis de découvrir la gestion de projet de <strong>Génie
+                                    Civil</strong>
+                                de bout en bout.
+                                J'ai appris à lire et concevoir des plans d'infrastructure réseau (adduction, chambre de
+                                tirage) et à coordonner des acteurs externes.
+                                <br><strong>Difficulté surmontée :</strong> Appréhender les contraintes techniques du
+                                terrain et assurer la communication fluide entre le promoteur et les équipes travaux.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
+
+                <aside class="mission-sidebar">
+                    <div class="sidebar-sticky">
+
+                        <div class="sidebar-section">
+                            <h4>Compétences Mobilisées</h4>
+                            <div class="tags-container">
+                                <span class="skill-tag">RT2 niv1. Découvrir les systèmes de transmissions</span>
+                                <span class="skill-tag">RT3 niv1. S’intégrer dans un service informatique</span>
+                                <span class="skill-tag">RT1 niv2. Administrer un Réseaux</span>
+                                <span class="skill-tag">RT2 niv2. Maîtriser les différentes composantes des solutions de
+                                    connexion</span>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h4>Apprentissages Critiques (AC)</h4>
+                            <ul class="clean-ac-list">
+                                <li><strong>AC12.05</strong> Communiquer avec un tiers et adapter son discours</li>
+                                <li><strong>AC13.01</strong> Utiliser un système informatique et ses outils</li>
+                                <li><strong>AC21.04</strong> Déployer des services réseaux avancés</li>
+                                <li><strong>AC21.06</strong> Travailler en équipe pour développer ses compétences
+                                    professionnelles</li>
+                                <li><strong>AC22.05</strong> Capacité à questionner un cahier des charges</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </aside>
+
             </div>
         </section>
 
@@ -94,22 +136,25 @@
                 <h3 class="mission-title">Mission 2 : Supervision (Monitoring)</h3>
                 <div class="mission-number">02</div>
             </div>
-            
+
             <div class="mission-details">
                 <div class="mission-left">
                     <h4>Contexte & Objectifs</h4>
                     <p>
-                        <strong>Contexte :</strong> L'équipe avait besoin de visibilité sur la charge des liens inter-sites.
-                        <br><strong>Objectif :</strong> Installer une sonde de supervision pour remonter les alertes en cas de saturation.
+                        <strong>Contexte :</strong> L'équipe avait besoin de visibilité sur la charge des liens
+                        inter-sites.
+                        <br><strong>Objectif :</strong> Installer une sonde de supervision pour remonter les alertes en
+                        cas de saturation.
                     </p>
-                    
+
                     <h4 style="margin-top: 20px;">Actions</h4>
-                    <p>Installation d'un serveur Linux (Debian) et configuration de l'outil Nagios/Centreon. Création des scripts de remontée d'alerte SNMP.</p>
-                    
+                    <p>Installation d'un serveur Linux (Debian) et configuration de l'outil Nagios/Centreon. Création
+                        des scripts de remontée d'alerte SNMP.</p>
+
                     <div class="analysis-box">
                         <h4>Auto-analyse</h4>
                         <p>
-                            J'ai développé mes compétences système (Linux) et compris le protocole SNMP. 
+                            J'ai développé mes compétences système (Linux) et compris le protocole SNMP.
                             C'était ma première mission en autonomie quasi-totale.
                         </p>
                     </div>
@@ -134,19 +179,21 @@
                 <h3 class="mission-title">Mission 3 : Sécurisation VPN</h3>
                 <div class="mission-number">03</div>
             </div>
-            
+
             <div class="mission-details">
                 <div class="mission-left">
                     <h4>Contexte & Objectifs</h4>
                     <p>
-                        <strong>Contexte :</strong> Sécuriser l'accès distant pour les télétravailleurs d'une agence comptable.
+                        <strong>Contexte :</strong> Sécuriser l'accès distant pour les télétravailleurs d'une agence
+                        comptable.
                         <br><strong>Solution :</strong> Mise en place d'un tunnel VPN IPsec.
                     </p>
-                    
+
                     <div class="analysis-box">
                         <h4>Auto-analyse</h4>
                         <p>
-                            Mission complexe touchant à la Cybersécurité. J'ai dû me documenter (en anglais) sur les protocoles de chiffrement.
+                            Mission complexe touchant à la Cybersécurité. J'ai dû me documenter (en anglais) sur les
+                            protocoles de chiffrement.
                         </p>
                     </div>
                 </div>
@@ -171,4 +218,5 @@
     </footer>
 
 </body>
+
 </html>

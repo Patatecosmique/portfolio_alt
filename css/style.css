@@ -309,12 +309,6 @@ h3.section-title::after {
     margin-bottom: 25px;
 }
 
-/* Arrondir les coins de l'image de la carte */
-.mission-right img {
-    border-radius: 15px; /* Plus le chiffre est grand, plus c'est rond */
-}
-
-
 /* Stylisation de la liste à puces */
 .uci-list { 
     margin: 0; 
@@ -561,111 +555,187 @@ footer {
 .cv-content { font-weight: bold; font-size: 1rem; display: flex; align-items: center; gap: 10px; color: var(--white); }
 .arrow-icon { font-size: 1.2rem; color: var(--white); }
 
-/* =========================================
-   CARTE MENTALE (MIND MAP) - STYLE FINAL
-   ========================================= */
+/* --- STYLE MISSION MODERNE (Dashboard Layout) --- */
 
-/* Conteneur principal qui organise les 3 colonnes */
-.mind-map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px; /* Espace important entre les colonnes et le cercle */
-    padding: 20px 0;
-}
-
-/* Style des colonnes latérales */
-.mm-column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Espace vertical entre les cartes */
-    flex: 1; /* Les colonnes gauche/droite prennent l'espace dispo */
-}
-
-/* La colonne centrale ne doit pas s'étirer */
-.center-col {
-    flex: 0 0 auto;
-    z-index: 2; /* Pour être au-dessus des lignes si besoin */
-}
-
-/* --- STYLE DES CARTES (mm-card) --- */
-.mm-card {
+.mission-modern {
     background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    position: relative; /* Nécessaire pour les connecteurs */
-    border-top: 4px solid #FF7900; /* La ligne orange EN HAUT comme sur le modèle */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
 }
 
-.mm-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+/* En-tête épuré */
+.mission-header-modern {
+    border-left: 5px solid var(--orange-brand);
+    padding-left: 20px;
+    margin-bottom: 40px;
 }
 
-.mm-card h4 {
-    color: #000;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.mission-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    letter-spacing: 2px;
     font-weight: 700;
 }
 
-.mm-card p {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
-    margin: 0;
+.mission-title-large {
+    font-size: 2rem;
+    color: var(--black);
+    margin: 5px 0 0 0;
 }
 
-/* --- CONNECTEURS (Lignes Oranges) --- */
-/* On utilise le pseudo-élément ::after pour créer la ligne */
-.mm-card::after {
+/* Grille Asymétrique (Layout principal) */
+.mission-layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Le contenu prend 2/3, la sidebar 1/3 */
+    gap: 50px;
+    align-items: start;
+}
+
+/* Colonne Principale */
+.modern-heading {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.content-block {
+    margin-bottom: 40px;
+    line-height: 1.7;
+    color: var(--dark-grey);
+}
+
+/* Liste "Timeline" pour les tâches */
+.timeline-list {
+    list-style: none;
+    border-left: 2px solid #eee;
+    padding-left: 20px;
+}
+
+.timeline-list li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.timeline-list li::before {
     content: '';
     position: absolute;
-    top: 50%; /* Centré verticalement par rapport à la carte */
-    width: 50px; /* Longueur de la ligne */
-    height: 3px; /* Épaisseur de la ligne */
-    background-color: #FF7900;
+    left: -26px; /* Ajuster selon le border-left */
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--orange-brand);
+    border-radius: 50%;
 }
 
-/* Pour la colonne de GAUCHE, la ligne part de la DROITE de la carte */
-.left-col .mm-card::after {
-    right: -50px;
-}
-
-/* Pour la colonne de DROITE, la ligne part de la GAUCHE de la carte */
-.right-col .mm-card::after {
-    left: -50px;
-}
-
-/* --- STYLE DU CERCLE CENTRAL --- */
-.mm-circle {
-    width: 150px;
-    height: 150px;
-    background: #fff;
-    border: 4px solid #FF7900; /* Bordure épaisse orange */
-    border-radius: 50%; /* Pour faire un cercle parfait */
+/* Carte Analyse mise en avant */
+.analysis-card {
+    background: #fff8f0; /* Fond orange très pâle */
+    border: 1px solid rgba(255, 121, 0, 0.2);
+    border-radius: 8px;
+    padding: 25px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(255, 121, 0, 0.15); /* Légère lueur orange */
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-.mm-circle .big-num {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #FF7900; /* Le chiffre '5' en orange */
-    line-height: 1;
-    margin-bottom: 5px;
+.analysis-icon {
+    font-size: 2rem;
 }
 
-.mm-circle .label {
+.analysis-text h4 {
+    color: var(--orange-brand);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Image Preuve */
+.proof-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.proof-container img:hover { transform: scale(1.02); }
+.caption { font-size: 0.85rem; color: #888; margin-top: 5px; font-style: italic; }
+
+
+/* --- SIDEBAR (Droite) --- */
+.mission-sidebar {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid var(--black); /* Touche tech */
+}
+
+/* Si on veut que la sidebar suive le scroll (optionnel) */
+.sidebar-sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h4 {
     font-size: 1rem;
-    font-weight: 700;
-    color: #000; /* Le texte 'MISSIONS' en noir */
     text-transform: uppercase;
+    color: #999;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Nouveaux Badges (Tags) */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--white);
+    border: 1px solid #ddd;
+    color: var(--black);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    border-left: 3px solid var(--orange-brand);
+}
+
+/* Liste AC épurée */
+.clean-ac-list {
+    list-style: none;
+}
+
+.clean-ac-list li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.clean-ac-list strong {
+    color: var(--orange-brand);
+    display: block; /* Code AC sur sa propre ligne */
+    margin-bottom: 2px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .mission-layout-grid {
+        grid-template-columns: 1fr; /* Retour à 1 colonne sur mobile */
+    }
+    .mission-sidebar {
+        margin-top: 0;
+        order: -1; 
+    }
 }
 
 /* --- RESPONSIVE (Pour mobile) --- */
