@@ -309,6 +309,12 @@ h3.section-title::after {
     margin-bottom: 25px;
 }
 
+/* Arrondir les coins de l'image de la carte */
+.mission-right img {
+    border-radius: 15px; /* Plus le chiffre est grand, plus c'est rond */
+}
+
+
 /* Stylisation de la liste à puces */
 .uci-list { 
     margin: 0; 
@@ -554,6 +560,163 @@ footer {
 .cv-box h4 { color: var(--white); }
 .cv-content { font-weight: bold; font-size: 1rem; display: flex; align-items: center; gap: 10px; color: var(--white); }
 .arrow-icon { font-size: 1.2rem; color: var(--white); }
+
+/* =========================================
+   CARTE MENTALE (MIND MAP) - STYLE FINAL
+   ========================================= */
+
+/* Conteneur principal qui organise les 3 colonnes */
+.mind-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Espace important entre les colonnes et le cercle */
+    padding: 20px 0;
+}
+
+/* Style des colonnes latérales */
+.mm-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace vertical entre les cartes */
+    flex: 1; /* Les colonnes gauche/droite prennent l'espace dispo */
+}
+
+/* La colonne centrale ne doit pas s'étirer */
+.center-col {
+    flex: 0 0 auto;
+    z-index: 2; /* Pour être au-dessus des lignes si besoin */
+}
+
+/* --- STYLE DES CARTES (mm-card) --- */
+.mm-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative; /* Nécessaire pour les connecteurs */
+    border-top: 4px solid #FF7900; /* La ligne orange EN HAUT comme sur le modèle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mm-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.mm-card h4 {
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.mm-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- CONNECTEURS (Lignes Oranges) --- */
+/* On utilise le pseudo-élément ::after pour créer la ligne */
+.mm-card::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Centré verticalement par rapport à la carte */
+    width: 50px; /* Longueur de la ligne */
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: #FF7900;
+}
+
+/* Pour la colonne de GAUCHE, la ligne part de la DROITE de la carte */
+.left-col .mm-card::after {
+    right: -50px;
+}
+
+/* Pour la colonne de DROITE, la ligne part de la GAUCHE de la carte */
+.right-col .mm-card::after {
+    left: -50px;
+}
+
+/* --- STYLE DU CERCLE CENTRAL --- */
+.mm-circle {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border: 4px solid #FF7900; /* Bordure épaisse orange */
+    border-radius: 50%; /* Pour faire un cercle parfait */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 121, 0, 0.15); /* Légère lueur orange */
+}
+
+.mm-circle .big-num {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FF7900; /* Le chiffre '5' en orange */
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.mm-circle .label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000; /* Le texte 'MISSIONS' en noir */
+    text-transform: uppercase;
+}
+
+/* --- RESPONSIVE (Pour mobile) --- */
+@media screen and (max-width: 900px) {
+    .mind-map-container {
+        flex-direction: column; /* On empile tout verticalement */
+        gap: 30px;
+    }
+
+    /* Le cercle passe en premier */
+    .center-col { order: -1; }
+
+    /* On cache les lignes de connexion sur mobile */
+    .mm-card::after { display: none; }
+    
+    /* On réduit un peu le cercle */
+    .mm-circle { width: 120px; height: 120px; }
+    .mm-circle .big-num { font-size: 2.5rem; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- RESPONSIVE MOBILE --- */
 @media screen and (max-width: 900px) {
