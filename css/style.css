@@ -595,3 +595,26 @@ footer {
     .mission-header-modern { flex-direction: column-reverse; align-items: flex-start; padding-left: 15px;}
     .mission-number-large { font-size: 4rem; margin-left: 0; margin-bottom: 10px; align-self: flex-end; }
 }
+
+
+
+/* --- Style pour les Tâches avec Sous-texte --- */
+
+.task-title {
+    display: block; /* Force le titre à prendre toute la largeur (donc retour à la ligne après) */
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 4px; /* Petit espace sous le titre */
+}
+
+.task-desc {
+    font-size: 0.9rem;
+    color: var(--mid-grey); /* Gris pour le sous-texte */
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* On ajuste un peu l'espacement des points de la liste */
+.timeline-list li {
+    margin-bottom: 20px; /* Plus d'espace entre chaque tâche */
+}
