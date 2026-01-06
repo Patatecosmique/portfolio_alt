@@ -26,16 +26,117 @@
         </div>
     </nav>
 
+
+
+
     <header class="hero" style="min-height: 40vh;">
         <div class="hero-content fade-in">
             <h1>Mes Missions</h1>
             <h2>Preuves de compétences</h2>
             <p>
-                Analyse détaillée de trois situations professionnelles significatives
+                Analyse détaillée de trois projets professionnels
                 mettant en œuvre les Apprentissages Critiques (AC) du BUT R&T.
             </p>
         </div>
     </header>
+
+
+    <section class="mission-modern reveal">
+
+        <div class="mission-header-modern">
+            <div class="header-left">
+                <span class="mission-label">Savoir-Faire</span>
+                <h3 class="mission-title-large">Focus Technique : La Boucle Locale Optique</h3>
+            </div>
+        </div>
+
+        <div class="mission-layout-grid">
+
+            <div class="mission-content-main">
+                <div class="content-block">
+                    <p>
+                        La majorité de mes missions concerne le déploiement du réseau <strong>FTTH (Fiber To The Home)
+                            et bientôt le FTTE (Fiber To The Enterprise)</strong>.
+                        Pour concevoir un raccordement, il est obligatoire de maîtriser l'architecture complète du
+                        réseau, du cœur jusqu'à l'abonné du moins savoir comment cela fonctionne.
+                        Voici les 4 points clés de l'ingénierie fibre sur lesquels j'interviens :
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <ul class="timeline-list">
+                        <li>
+                            <strong class="task-title" style="color: var(--orange-brand);">1. Le NRO (Nœud de
+                                Raccordement Optique)</strong>
+                            <p class="task-desc">
+                                C'est le "cœur" du réseau local. Il abrite les équipements actifs (OLT) qui émettent le
+                                signal laser.
+                                Dans mes études, je dois identifier de quel NRO dépend les adresses à raccorder pour
+                                assurer la continuité.
+                            </p>
+                        </li>
+                        <li>
+                            <strong class="task-title" style="color: var(--orange-brand);">2. Le PM (Point de
+                                Mutualisation)</strong>
+                            <p class="task-desc">
+                                Souvent une armoire de rue. C'est l'interface entre l'Opérateur d'Infrastructure (qui
+                                pose la fibre) et les Opérateurs Commerciaux (Orange, Free, etc.).
+                                Mes dossiers de raccordement doivent garantir qu'il reste de la capacité (des positions
+                                libres) dans ce PM et déterminer si des positions sont disponibles pour mon dossier.
+                            </p>
+                        </li>
+                        <li>
+                            <strong class="task-title" style="color: var(--orange-brand);">3. Le PB (Point de
+                                Branchement Optique)</strong>
+                            <p class="task-desc">
+                                C'est le boîtier situé au plus près des logements (sur un poteau, en façade ou en
+                                chambre souterraine).
+                                <strong>C'est mon point de travail principal :</strong> je dois définir quel PB va
+                                desservir la/les nouvelle maison et vérifier s'il faut tirer un nouveau câble de
+                                distribution et/ou ajouté des PBs.
+                            </p>
+                        </li>
+                        <li>
+                            <strong class="task-title" style="color: var(--orange-brand);">4. La PTO (Prise Terminale
+                                Optique)</strong>
+                            <p class="task-desc">
+                                Le point final chez le client. Mon rôle d'étude s'arrête techniquement à la limite de
+                                propriété, mais je dois faire en sorte que les techniciens puissent installer la fibre
+                                sans trop de difficultés.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="mission-sidebar">
+                <div class="sidebar-sticky">
+                    <div class="sidebar-section">
+                        <h4 class="sidebar-title">Synoptique Réseau</h4>
+                        <div class="skills-mosaic" style="display: flex; flex-direction: column; gap: 10px;">
+                            <div style="text-align: center; font-weight: bold; color: #555;">NRO (Central)</div>
+                            <div style="text-align: center; color: var(--orange-brand);">⬇ Transport</div>
+                            <div
+                                style="background: #eee; padding: 10px; border-radius: 4px; text-align: center; border: 1px solid #ddd;">
+                                PM (Point de Mutualisation)</div>
+                            <div style="text-align: center; color: var(--orange-brand);">⬇ Distribution</div>
+                            <div
+                                style="background: #eee; padding: 10px; border-radius: 4px; text-align: center; border: 1px solid #ddd;">
+                                PB (Point de Branchement Optique)</div>
+                            <div style="text-align: center; color: var(--orange-brand);">⬇ Raccordement</div>
+                            <div
+                                style="background: #fff; padding: 10px; border-radius: 4px; text-align: center; border: 2px solid var(--orange-brand);">
+                                🏠 PTO (Point Terminal Optique, le client)</div>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">
+                            Architecturesimplifié standard
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
 
     <div class="section-padding">
 
@@ -65,29 +166,39 @@
                         <ul class="timeline-list">
                             <li>
                                 <strong class="task-title">Réalisation de la Pré-Étude</strong>
-                                <p class="task-desc">La Pré-Etude a pour but ; d'analyser l'infrastructure réseau existant
+                                <p class="task-desc">La Pré-Etude a pour but ; d'analyser l'infrastructure réseau
+                                    existant
                                     : voir si il y a un saturation du réseaux (plus de place dans les équipements de
-                                    raccordement), est ce que il y a des fibres de libre, lesquels ?, quel dimensions de cable a
-                                    poser ? (nombre de fibre dans le cable), identifier le point de raccordement optimal pour le lotissment, via les outils du SI
-                                    (Géoréso, IPON...).
+                                    raccordement), est ce que il y a des fibres de libre dans les equipement deja poser,
+                                    lesquels ?, quel dimensions de cable a
+                                    poser si il faut le faire ? (nombre de fibre dans le cable), identifier le point de
+                                    raccordement optimal pour le lotissment, via les outils du SI
+                                    (Géoréso, IPON...). Si il faut crée du nouveau réseau (cable, équipement...) il faut
+                                    le prévoir dans l'étude et donc dimenssionner le nombre de maision que desservira un
+                                    PB part exemple (en suivant les ingénierie).
                                 </p>
                             </li>
                             <li>
                                 <strong class="task-title">Mise à jour du SI</strong>
                                 <p class="task-desc">Création du projet dans les bases de données d'Orange pour
-                                    référencer les futurs équipements. Pour la partis infrastructure j'utilise Géoréso 
-                                    pour référencer le projet (cable, matériel...). Pour la partie de la disponnibilté de si c saturer on utilise IPON, dans cette application on crée
+                                    référencer les futurs équipements. Pour la partis infrastructure j'utilise Géoréso
+                                    pour référencer le projet (cable, matériel...). Pour la partie de la disponnibilté
+                                    de si c saturer on utilise IPON, dans cette application on crée
                                     notre projet.
                                 </p>
                             </li>
                             <li>
                                 <strong class="task-title">Conception des Plans</strong>
                                 <p class="task-desc">Réalisation du plan de situation et du plan Projet
-                                sur Adobe PDF. Les plan on pour but de guider les techniciens pour qu'ils réalisent les travaux 
-                                en borne et du forme. Le plan de situation donne un aperçu de la zone des travaux et le plan projet va donné les détails techniques
-                                pour réaliser les travaux. Ici dans ce projet, pour le plan projet j'ai créé le plan a partir de ce que j'ai fait dans Géoréso, et dans celui- ci j'ai
-                                donné les détails technique pour que les technicien réalise les travaux, cf : Plan_situation - Plan_projet. 
-                            </p>
+                                    sur Adobe PDF. Les plan on pour but de guider les techniciens pour qu'ils réalisent
+                                    les travaux
+                                    en borne et du forme. Le plan de situation donne un aperçu de la zone des travaux et
+                                    le plan projet va donné les détails techniques
+                                    pour réaliser les travaux. Ici dans ce projet, pour le plan projet j'ai créé le plan
+                                    a partir de ce que j'ai fait dans Géoréso, et dans celui- ci j'ai
+                                    donné les détails technique pour que les technicien réalise les travaux, cf :
+                                    Plan_situation - Plan_projet.
+                                </p>
                             </li>
                             <li>
                                 <strong class="task-title">Valorisation Financière</strong>
@@ -96,7 +207,8 @@
                             </li>
                             <li>
                                 <strong class="task-title">Commandite des Travaux</strong>
-                                <p class="task-desc">Transmission du dossier technique complet (Plan situation, Plan projet, Valorisation, et des document complémentaires...)
+                                <p class="task-desc">Transmission du dossier technique complet (Plan situation, Plan
+                                    projet, Valorisation, et des document complémentaires...)
                                     pvia l'application LINE.</p>
                             </li>
                             <li>

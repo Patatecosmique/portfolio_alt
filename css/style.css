@@ -596,25 +596,152 @@ footer {
     .mission-number-large { font-size: 4rem; margin-left: 0; margin-bottom: 10px; align-self: flex-end; }
 }
 
+/* --- STYLE SOMMAIRE AÉRIEN (Pas de bloc) --- */
+.summary-minimal {
+    margin: 50px auto;      /* De l'espace en haut et en bas */
+    text-align: center;     /* Tout centrer */
+    max-width: 800px;
+}
+
+.summary-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--mid-grey); /* Gris discret pour le titre */
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+/* Petite ligne décorative sous le titre */
+.summary-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--orange-brand);
+    margin: 10px auto 0;
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* On utilise Flexbox pour faire une mise en page fluide */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px 30px; /* Espace vertical / horizontal */
+}
+
+.summary-list li {
+    /* Pas de marge spécifique, le gap gère l'espacement */
+}
+
+.summary-list a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Effet de soulignement orange au survol */
+.summary-list a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--orange-brand);
+    transition: width 0.3s ease;
+}
+
+.summary-list a:hover {
+    color: var(--orange-brand);
+}
+
+.summary-list a:hover::before {
+    width: 100%; /* La ligne se dessine sous le texte */
+}
+/* ... (Le contenu précédent reste identique) ... */
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (Mobile & Tablettes)
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+    .bento-grid { grid-template-columns: 1fr; }
+    .main-bio { grid-column: span 1; grid-row: auto; }
+    
+    /* Mind Map Mobile */
+    .mind-map-container { flex-direction: column; gap: 30px; }
+    .center-col { order: -1; }
+    .mm-card::after { display: none; }
+    
+    /* Mission Moderne Mobile */
+    .mission-layout-grid { grid-template-columns: 1fr; }
+    .mission-sidebar { position: static; }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navbar Mobile */
+    .navbar { padding: 0 20px; }
+    .nav-links {
+        position: absolute; right: 0; height: 92vh; top: 80px;
+        background-color: var(--black); flex-direction: column;
+        width: 100%; transform: translateX(100%); transition: transform 0.4s ease-in;
+        padding-top: 50px;
+    }
+    .nav-links li { margin: 20px 0; }
+    .burger { display: block; }
+    .nav-active { transform: translateX(0%); }
+    
+    /* Header Mobile */
+    .hero { flex-direction: column-reverse; padding: 40px 20px; text-align: center; }
+    .hero-content { padding-right: 0; margin-top: 40px; }
+    .company-grid, .mission-details, .mission-details-container { grid-template-columns: 1fr; flex-direction: column; }
+    
+    /* Header Mission Mobile */
+    .mission-header { flex-direction: column-reverse; align-items: flex-start; }
+    .mission-number { font-size: 3rem; margin-bottom: 10px; }
+    
+    /* Header Mission Moderne Mobile */
+    .mission-header-modern { flex-direction: column-reverse; align-items: flex-start; padding-left: 15px;}
+    .mission-number-large { font-size: 4rem; margin-left: 0; margin-bottom: 10px; align-self: flex-end; }
+} /* <--- CETTE ACCOLADE FERME LE MEDIA QUERY. IMPORTANT ! */
 
 
-/* --- Style pour les Tâches avec Sous-texte --- */
+/* ==========================================================================
+   NOUVEAUX STYLES POUR LA TIMELINE (Alignement corrigé)
+   ========================================================================== */
+
+/* On réduit le décalage par défaut de la liste pour l'aligner avec le texte */
+.timeline-list {
+    padding-left: 20px; /* Moins de marge à gauche (standard est 40px) */
+    margin-top: 10px;
+}
+
+.timeline-list li {
+    margin-bottom: 25px; /* Espace aéré entre chaque étape */
+    padding-left: 10px;  /* Espace entre la puce et le texte pour ne pas être "collé" */
+}
 
 .task-title {
-    display: block; /* Force le titre à prendre toute la largeur (donc retour à la ligne après) */
-    font-size: 1rem;
+    display: block; /* Le titre prend sa propre ligne */
+    font-size: 1.05rem;
+    font-weight: 700;
     color: var(--black);
-    margin-bottom: 4px; /* Petit espace sous le titre */
+    margin-bottom: 4px; /* Espace entre le titre et la description */
 }
 
 .task-desc {
-    font-size: 0.9rem;
-    color: var(--mid-grey); /* Gris pour le sous-texte */
+    font-size: 0.95rem;
+    color: var(--mid-grey);
     margin: 0;
-    line-height: 1.4;
-}
-
-/* On ajuste un peu l'espacement des points de la liste */
-.timeline-list li {
-    margin-bottom: 20px; /* Plus d'espace entre chaque tâche */
+    line-height: 1.5;
+    display: block;
 }
