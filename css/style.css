@@ -757,3 +757,242 @@ footer {
     padding: 40px;
     border-top: 1px solid transparent;
 }
+
+
+/* ==========================================================================
+   STYLE SCHÉMA RÉSEAU (Vertical Flow)
+   ========================================================================== */
+
+.network-schema {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+/* LA LIGNE DE FIBRE (Barre orange verticale) */
+.fiber-line {
+    position: absolute;
+    left: 45px; /* Centré sous les icônes */
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--orange-brand) 50%, #ddd);
+    z-index: 0;
+}
+
+/* Conteneur d'une étape */
+.schema-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* L'icône ronde à gauche */
+.step-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border: 3px solid var(--orange-brand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0; /* Ne rétrécit pas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* La carte de texte à droite */
+.step-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    flex-grow: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+/* Petite flèche qui pointe vers la gauche (optionnel, pour faire bulle) */
+.step-card::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.step-card:hover {
+    transform: translateX(5px);
+    border-color: var(--orange-brand);
+}
+
+/* Mise en avant de l'étape active (PB) */
+.schema-step.active-step .step-card {
+    border-left: 5px solid var(--orange-brand);
+    background-color: #fffaf5;
+}
+
+.step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.step-desc {
+    font-size: 0.9rem;
+    color: var(--mid-grey);
+    line-height: 1.5;
+}
+
+/* --- LISTE OUTILS (SIDEBAR) --- */
+.tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    transition: background 0.3s;
+}
+
+.tool-item:hover {
+    background: #fff;
+    border-color: var(--orange-brand);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tool-icon {
+    font-size: 1.5rem;
+}
+
+.tool-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+}
+/* ==========================================================================
+   STYLE SCHÉMA FINANCIER (HORIZONTAL)
+   ========================================================================== */
+
+.finance-block {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid var(--orange-brand);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.finance-title {
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.finance-intro {
+    color: var(--mid-grey);
+    margin-bottom: 25px;
+}
+
+.finance-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.flow-step {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.2s;
+}
+
+.flow-step:hover {
+    background: #fff;
+    border-color: var(--orange-brand);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.flow-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.flow-step strong {
+    display: block;
+    color: var(--orange-brand);
+    margin-bottom: 2px;
+}
+
+.flow-step span {
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.flow-step p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.flow-arrow {
+    align-self: center;
+    font-size: 1.5rem;
+    color: #ccc;
+    font-weight: 900;
+}
+
+.finance-alert {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border-left: 4px solid #ffeeba;
+}
+
+/* Responsive : Passer le flux en vertical sur mobile */
+@media (max-width: 768px) {
+    .finance-flow {
+        flex-direction: column;
+    }
+    .flow-arrow {
+        transform: rotate(90deg); /* Flèche vers le bas */
+        margin: 10px 0;
+    }
+}
