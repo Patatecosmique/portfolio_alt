@@ -26,9 +26,6 @@
         </div>
     </nav>
 
-
-
-
     <header class="hero" style="min-height: 40vh;">
         <div class="hero-content fade-in">
             <h1>Mes Missions</h1>
@@ -39,7 +36,6 @@
             </p>
         </div>
     </header>
-
 
     <section class="mission-modern reveal">
 
@@ -138,524 +134,564 @@
         </div>
     </section>
 
-    <div class="section-padding">
+    <div class="section-padding" style="background-color: #fafafa; padding-top: 20px;">
 
-        <section id="mission1" class="mission-modern reveal">
-            <div class="mission-header-modern">
-                <div class="header-left">
-                    <span class="mission-label">Mission</span>
-                    <h3 class="mission-title-large">Raccordement public pour un lotissement neuf</h3>
+        <h3 class="section-title" style="margin-bottom: 40px;">Détails des Projets</h3>
+
+        <div class="accordion-container reveal">
+
+            <div class="accordion-item" id="acc-mission1">
+                <button class="accordion-header" onclick="toggleAccordion('acc-mission1')">
+                    <div class="acc-left">
+                        <span class="acc-number">01</span>
+                        <h3 class="acc-title">Raccordement Lotissement Neuf</h3>
+                    </div>
+                    <div class="acc-icon">+</div>
+                </button>
+
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <div class="mission-layout-grid">
+                            <div class="mission-content-main">
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Contexte & Objectifs</h4>
+                                    <p><strong>Contexte :</strong> Un promoteur immobilier (Sagir Promotion) lance la
+                                        construction
+                                        d'un lotissement de 7 maisons.<br>
+                                        <strong>Rôle :</strong>Mon tuteur m'a confié la mission de réaliser le
+                                        raccordement
+                                        public pour ce lotissement neuf en autonomie.
+                                    </p>
+                                </div>
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Tâches Réalisées</h4>
+                                    <ul class="timeline-list">
+                                        <li><strong class="task-title">Pré-Étude</strong> <span
+                                                class="task-desc">L'objectif est d'analyser l'infrastructure réseau
+                                                existante pour identifier le point
+                                                de raccordement optimal via les outils du SI (Géoréso, IPON).
+                                                Je vérifie plusieurs points : y a-t-il une saturation du réseau (plus de
+                                                place
+                                                dans les équipements) ? Reste-t-il des fibres libres dans les
+                                                équipements déjà posés
+                                                et lesquelles ?
+                                                Je détermine également s'il faut poser de nouveaux câbles, leurs
+                                                dimensions (nombre
+                                                de fibres) et je prévois le dimensionnement des équipements (ex: combien
+                                                de maisons
+                                                desservira un Point de Branchement) en respectant les règles
+                                                d'ingénierie.</span></li>
+                                        <li><strong class="task-title">Mise à jour SI</strong> <span
+                                                class="task-desc">Création du projet dans les bases de données d'Orange
+                                                pour référencer les futurs
+                                                équipements.
+                                                Pour la partie infrastructure, j'utilise <strong>Géoréso</strong> pour
+                                                dessiner le
+                                                projet (câbles, matériel...).
+                                                Pour la partie disponibilité et capacité (savoir si le réseau est
+                                                saturé), j'utilise
+                                                l'application <strong>IPON</strong> pour y créer le projet et réserver
+                                                les
+                                                ressources.</span></li>
+                                        <li><strong class="task-title">Conceptiondes Plans</strong> <span
+                                                class="task-desc">Réalisation du plan de situation et du plan Projet sur
+                                                Adobe PDF. Ces plans ont pour
+                                                but de guider les techniciens pour qu'ils réalisent les travaux en bonne
+                                                et due
+                                                forme.
+                                                Le <strong>plan de situation</strong> donne un aperçu global de la zone
+                                                de travaux,
+                                                tandis que le <strong>plan projet</strong> fournit les détails
+                                                techniques précis.
+                                                Sur ce dossier, j'ai généré le fond de plan à partir de ma conception
+                                                sur Géoréso
+                                                (tracé du câble de distribution), puis j'y ai ajouté les annotations
+                                                techniques
+                                                nécessaires aux techniciens.</span></li>
+                                        <li><strong class="task-title">Valorisation</strong> <span
+                                                class="task-desc">Estimation du coût des travaux via l'outil
+                                                <strong>GDP</strong>. Je dois
+                                                sélectionner dans le catalogue des forfaits contractuels ("ACF01")
+                                                l'article le plus
+                                                approprié à l'action demandée.
+                                                Par exemple, pour la pose du câble de distribution, j'ai sélectionné le
+                                                forfait
+                                                <strong>PFC03</strong> (pose de câble optique aérien ou conduite) en
+                                                détaillant le
+                                                métré.
+                                                De même, pour les mesures de Réflectométrie au Point de Mutualisation
+                                                (PM) demandées
+                                                dans le plan, j'ai ajouté le forfait spécifique
+                                                <strong>IMZ0</strong>.</span></li>
+                                        <li><strong class="task-title">Commandite</strong> <span
+                                                class="task-desc">Transmission du dossier technique complet (Plan
+                                                situation, Plan projet, Valorisation
+                                                et documents complémentaires) au prestataire via l'application
+                                                <strong>LINE</strong>.
+                                                Une fois le dossier reçu, le prestataire mandate un technicien pour
+                                                effectuer les
+                                                travaux sur le terrain.</span></li>
+                                        <li><strong class="task-title">Suivi & Réception</strong> <span
+                                                class="task-desc">Contrôle de la conformité du chantier via l'analyse du
+                                                "Retour Travaux" (RET) envoyé
+                                                par le technicien sur LINE (photos, métrés).
+                                                Je valide ou non la conformité en comparant ce qui à était réalisé avec
+                                                ma commande
+                                                initiale.
+                                                Par exemple, sur la photo de retour travaux (<em> cf :
+                                                    Photo_retour_travaux</em>),
+                                                on
+                                                distingue bien une gaine verte passant dans la dernière chambre de
+                                                raccordement, ce
+                                                qui me confirme que le tirage a été effectué correctement. Je vérifie
+                                                l'intégralité
+                                                du parcours grâce à l'ensemble des photos fournies pour chaque
+                                                chambre.</span></li>
+                                        <li><strong class="task-title">Clôture</strong> <span class="task-desc">Si le
+                                                RET est validé, je procède à la validation finale des attachements et au
+                                                déclenchement du paiement du prestataire.
+                                                En cas d'erreur sur les travaux ou la facturation, je rejette la demande
+                                                pour
+                                                correction. Une fois tout validé, le dossier est archivé via l'outil
+                                                <strong>Gedaffaires</strong>.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Preuves / Traces</h4>
+                                    <a href="preuves/mission1/Plan_Situation_SAINT-PATERNE - LE CHEVAIN.pdf"
+                                        target="_blank" class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Plan_situation.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+                                    <a href="preuves/mission1/Plan_Projet_SAINT-PATERNE - LE CHEVAIN.pdf"
+                                        target="_blank" class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Plan_projet.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+                                    <a href="preuves/mission1/Photo_retour_travaux.jpg" target="_blank"
+                                        class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Photo_retour_travaux.jpg</span>
+                                            <span class="file-desc">Aperçu du chantier terminé</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <aside class="mission-sidebar">
+                                <div class="sidebar-sticky">
+
+                                    <div class="sidebar-section">
+                                        <h4 class="sidebar-title">Compétences Mobilisées</h4>
+                                        <div class="skills-mosaic">
+                                            <div class="skill-box">RT2 niv1. Systèmes de transmissions</div>
+                                            <div class="skill-box">RT3 niv1. Intégration service info</div>
+                                            <div class="skill-box">RT1 niv2. Administrer un Réseaux</div>
+                                            <div class="skill-box">RT2 niv2. Solutions de connexion</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sidebar-divider"></div>
+
+                                    <div class="sidebar-section">
+                                        <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
+                                        <ul class="ac-list-vertical">
+                                            <li><span class="ac-id">AC12.05</span><span class="ac-desc">Communiquer avec
+                                                    un tiers et
+                                                    adapter son discours</span></li>
+                                            <li><span class="ac-id">AC12.03</span><span class="ac-desc">Déployer des
+                                                    supports de
+                                                    transmission</span></li>
+                                            <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un
+                                                    système
+                                                    informatique et ses outils</span></li>
+                                            <li><span class="ac-id">AC21.04</span><span class="ac-desc">Déployer des
+                                                    services
+                                                    réseaux avancés</span></li>
+                                            <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en
+                                                    équipe pour
+                                                    développer ses compétences</span></li>
+                                            <li><span class="ac-id">AC22.05</span><span class="ac-desc">Capacité à
+                                                    questionner un
+                                                    cahier des charges</span></li>
+                                            <li><span class="ac-id">AC22.01</span><span class="ac-desc">Déployer et
+                                                    caractériser des
+                                                    systèmes de transmissions complexes</span></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </aside>
+                            <div class="analysis-card">
+                                <div class="analysis-text">
+                                    <h4>Auto-analyse & Progression</h4>
+                                    <p>
+                                        Cette première mission a été mon point d'entrée dans le métier de
+                                        Chargé d'Affaires.
+                                        Au-delà de la maitrise des outils du SI Orange (<strong>Georéso,
+                                            IPON</strong>....),
+                                        j'ai
+                                        surtout compris que la réussite d'un projet repose autant sur la rigueur
+                                        technique
+                                        que sur la <strong>communication</strong> avec les tiers.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <strong>Difficultés surmontées :</strong><br>
+                                        En tant que débutant, j'ai d'abord eu des difficultés à structurer ma
+                                        méthodologie. De
+                                        plus, pour réaliser la valorisation des travaux, j'ai dû m'approprier les
+                                        spécificités
+                                        des forfaits contractuels utilisés entre Orange et ses partenaires pour ce type
+                                        de
+                                        chantier.
+                                        J'ai également dû gérer des situations post-travaux : des non-conformités sur le
+                                        chantier
+                                        et des
+                                        incohérences dans les <strong>attachements</strong> (demandes de facturation du
+                                        prestataire).
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <strong>Solutions apportées :</strong><br>
+                                        J'ai co-construit avec mon tuteur pour gagner en autonomie un <strong>guide
+                                            méthodologique</strong> étape par
+                                        étape. Concernant les non-conformités, j'ai pris l'initiative de me déplacer sur
+                                        site
+                                        avec mon tuteur pour
+                                        rectifier l'erreurs. Pour l'attachements erronés il fallait le refuser afin de
+                                        ne pas
+                                        valider une facturation incorrecte et attendre le retour du prestataire.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mission-number-large">01</div>
             </div>
 
-            <div class="mission-layout-grid">
-                <div class="mission-content-main">
-                    <div class="content-block">
-                        <h4 class="modern-heading">Contexte & Objectifs</h4>
-                        <p>
-                            <strong>Contexte :</strong> Un promoteur immobilier (Sagir Promotion) lance la construction
-                            d'un lotissement de 7 maisons.
-                            <br><strong>Mon Rôle :</strong> Mon tuteur m'a confié la mission de réaliser le raccordement
-                            public pour ce lotissement neuf en autonomie.
-                        </p>
+            <div class="accordion-item" id="acc-mission2">
+                <button class="accordion-header" onclick="toggleAccordion('acc-mission2')">
+                    <div class="acc-left">
+                        <span class="acc-number">02</span>
+                        <h3 class="acc-title">Reprise Travaux (RIP)</h3>
                     </div>
+                    <div class="acc-icon">+</div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <div class="mission-layout-grid">
+                            <div class="mission-content-main">
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Contexte</h4>
+                                    <p>
+                                        <strong>Contexte :</strong>Prise en charge de ma première <strong>reprise de
+                                            travaux</strong> suite à des non-conformités lors de la réception d'un
+                                        chantier précédent.
+                                        <br><strong>Mon rôle :</strong> Réaliser la reprise des travaux non conformes
+                                        (partis étude
+                                        pour renvoyer en travaux) en respectant les normes en vigueur du RIP.
+                                    </p>
+                                </div>
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Tâches Réalisées</h4>
+                                    <ul class="timeline-list">
+                                        <li>Réalisation de l'Étude (analyse du retour travaux avec les non-conformités).
+                                        </li>
+                                        <li>Création du plan de situation et du plan Projet.</li>
+                                        <li>Conception des documents techniques pour corrigé les non-conformités.</li>
+                                        <li>Valorisation financière des travaux de reprise.</li>
+                                        <li>Envoi des documents réalisés aux prestataires pour travaux.</li>
+                                        <li>Suivi du chantier et réception (analyse du retour travaux).</li>
+                                        <li>Clôture administrative et paiement du prestataire.</li>
+                                    </ul>
+                                </div>
+                                <div class="content-block">
+                                    <h4 class="modern-heading">Preuves / Traces</h4>
 
-                    <div class="content-block">
-                        <h4 class="modern-heading">Tâches Réalisées</h4>
-                        <ul class="timeline-list">
-                            <li>
-                                <strong class="task-title">Réalisation de la Pré-Étude</strong>
-                                <p class="task-desc">
-                                    L'objectif est d'analyser l'infrastructure réseau existante pour identifier le point
-                                    de raccordement optimal via les outils du SI (Géoréso, IPON).
-                                    Je vérifie plusieurs points : y a-t-il une saturation du réseau (plus de place
-                                    dans les équipements) ? Reste-t-il des fibres libres dans les équipements déjà posés
-                                    et lesquelles ?
-                                    Je détermine également s'il faut poser de nouveaux câbles, leurs dimensions (nombre
-                                    de fibres) et je prévois le dimensionnement des équipements (ex: combien de maisons
-                                    desservira un Point de Branchement) en respectant les règles d'ingénierie.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Mise à jour du SI</strong>
-                                <p class="task-desc">
-                                    Création du projet dans les bases de données d'Orange pour référencer les futurs
-                                    équipements.
-                                    Pour la partie infrastructure, j'utilise <strong>Géoréso</strong> pour dessiner le
-                                    projet (câbles, matériel...).
-                                    Pour la partie disponibilité et capacité (savoir si le réseau est saturé), j'utilise
-                                    l'application <strong>IPON</strong> pour y créer le projet et réserver les
-                                    ressources.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Conception des Plans</strong>
-                                <p class="task-desc">
-                                    Réalisation du plan de situation et du plan Projet sur Adobe PDF. Ces plans ont pour
-                                    but de guider les techniciens pour qu'ils réalisent les travaux en bonne et due
-                                    forme.
-                                    Le <strong>plan de situation</strong> donne un aperçu global de la zone de travaux,
-                                    tandis que le <strong>plan projet</strong> fournit les détails techniques précis.
-                                    Sur ce dossier, j'ai généré le fond de plan à partir de ma conception sur Géoréso
-                                    (tracé du câble de distribution), puis j'y ai ajouté les annotations techniques
-                                    nécessaires aux techniciens.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Valorisation Financière</strong>
-                                <p class="task-desc">
-                                    Estimation du coût des travaux via l'outil <strong>GDP</strong>. Je dois
-                                    sélectionner dans le catalogue des forfaits contractuels ("ACF01") l'article le plus
-                                    approprié à l'action demandée.
-                                    Par exemple, pour la pose du câble de distribution, j'ai sélectionné le forfait
-                                    <strong>PFC03</strong> (pose de câble optique aérien ou conduite) en détaillant le
-                                    métré.
-                                    De même, pour les mesures de Réflectométrie au Point de Mutualisation (PM) demandées
-                                    dans le plan, j'ai ajouté le forfait spécifique <strong>IMZ0</strong>.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Commandite des Travaux</strong>
-                                <p class="task-desc">
-                                    Transmission du dossier technique complet (Plan situation, Plan projet, Valorisation
-                                    et documents complémentaires) au prestataire via l'application
-                                    <strong>LINE</strong>.
-                                    Une fois le dossier reçu, le prestataire mandate un technicien pour effectuer les
-                                    travaux sur le terrain.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Suivi & Réception</strong>
-                                <p class="task-desc">
-                                    Contrôle de la conformité du chantier via l'analyse du "Retour Travaux" (RET) envoyé
-                                    par le technicien sur LINE (photos, métrés).
-                                    Je valide ou non la conformité en comparant ce qui à était réalisé avec ma commande
-                                    initiale.
-                                    Par exemple, sur la photo de retour travaux (<em> cf : Photo_retour_travaux</em>),
-                                    on
-                                    distingue bien une gaine verte passant dans la dernière chambre de raccordement, ce
-                                    qui me confirme que le tirage a été effectué correctement. Je vérifie l'intégralité
-                                    du parcours grâce à l'ensemble des photos fournies pour chaque chambre.
-                                </p>
-                            </li>
-                            <li>
-                                <strong class="task-title">Clôture Administrative</strong>
-                                <p class="task-desc">
-                                    Si le RET est validé, je procède à la validation finale des attachements et au
-                                    déclenchement du paiement du prestataire.
-                                    En cas d'erreur sur les travaux ou la facturation, je rejette la demande pour
-                                    correction. Une fois tout validé, le dossier est archivé via l'outil
-                                    <strong>Gedaffaires</strong>.
-                                </p>
-                            </li>
-                        </ul>
+                                    <a href="preuves/mission2/ALM501239_Plan_Situation_L-OREE-D-ECOUVES.pdf"
+                                        target="_blank" class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Plan_situation.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+
+                                    <a href="preuves/mission2/ALM501239_Plan_Projet_L'OREE-D'ECOUVES.pdf"
+                                        target="_blank" class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Plan_projet.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+
+                                    <a href="preuves/mission2/Doc Mise en oeuvre RIP.pdf" target="_blank"
+                                        class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Documentation_mise_en_oeuvre_RIP.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+
+                                    <a href="preuves/mission2/Etiquetage TR.pdf" target="_blank"
+                                        class="proof-file-card">
+                                        <div class="file-icon">📄</div>
+                                        <div class="file-info">
+                                            <span class="file-name">Exemple_doc_technique.pdf</span>
+                                            <span class="file-desc">Cliquez pour consulter le document</span>
+                                        </div>
+                                        <div class="file-arrow">→</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <aside class="mission-sidebar">
+                                <div class="sidebar-sticky">
+
+                                    <div class="sidebar-section">
+                                        <h4 class="sidebar-title">Compétences Mobilisées</h4>
+                                        <div class="skills-mosaic">
+                                            <div class="skill-box">RT1 niv1. Administrer un Réseaux</div>
+                                            <div class="skill-box">RT2 niv1. Systèmes de transmissions</div>
+                                            <div class="skill-box">RT3 niv1. Intégration service info</div>
+                                            <div class="skill-box">RT1 niv2. Administrer un Réseaux</div>
+                                            <div class="skill-box">RT2 niv2. Solutions de connexion</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sidebar-divider"></div>
+
+                                    <div class="sidebar-section">
+                                        <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
+                                        <ul class="ac-list-vertical">
+                                            <li><span class="ac-id">AC11.05</span><span class="ac-desc">Identifier les
+                                                    dysfonctionnements du réseau local et savoir les signaler</span>
+                                            </li>
+                                            <li><span class="ac-id">AC12.05</span><span class="ac-desc">Communiquer avec
+                                                    un tiers et
+                                                    adapter son discours</span></li>
+                                            <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un
+                                                    système
+                                                    informatique et ses outils</span></li>
+                                            <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en
+                                                    équipe pour
+                                                    développer ses compétences</span></li>
+                                            <li><span class="ac-id">AC22.05</span><span class="ac-desc">Capacité à
+                                                    questionner un
+                                                    cahier des charges</span></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </aside>
+                            <div class="analysis-card">
+                                <div class="analysis-text">
+                                    <h4>Auto-analyse & Progression</h4>
+                                    <p>
+                                        Cette première expérience en <strong>reprise de travaux</strong> a été très
+                                        formatrice.
+                                        Elle m'a permis de comprendre qu'un dossier ne s'arrête pas à l'étude initiale,
+                                        mais
+                                        nécessite un suivi rigoureux jusqu'à la conformité totale. J'ai découvert les
+                                        spécificités des <strong>Réseaux d'Initiative Publique (RIP)</strong>.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <strong>Difficultés surmontées :</strong><br>
+                                        Ma principale difficulté résidait dans la méconnaissance initiale des règles
+                                        d'ingénierie spécifiques à la mise en œuvre sur les réseaux RIP. De plus, lors
+                                        de
+                                        l'analyse du <strong>Retour Travaux</strong>, j'ai été confronté à des écarts
+                                        techniques
+                                        réalisés par le prestataire suite au travaux réalisés pour corriger les
+                                        non-conformités.
+                                        Part ailleurs, pour réaliser la valorisation des travaux, j'ai dû m'approprier
+                                        les
+                                        spécificités des forfaits contractuels utilisés entre Orange et ses partenaires
+                                        pour ce
+                                        type de chantier.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <strong>Solutions apportées :</strong><br>
+                                        Pour combler mes lacunes sur les RIP, j'ai fait preuve de
+                                        <strong>curiosité</strong> en
+                                        sollicitant mes
+                                        référents, ce qui m'a permis d'apprendre rapidement. Par ailleurs, j'ai refusé
+                                        la
+                                        validation en l'état et demandé un renvoi en travaux pour correction,
+                                        garantissant ainsi
+                                        la conformité finale des travaux. Concernant la valorisation des travaux, j'ai
+                                        étudié
+                                        les forfait qui
+                                        existe pour les RIP afin de réaliser une valorisation conforme au reprise en
+                                        demandant
+                                        conseille à mes collègues.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="content-block">
-                <h4 class="modern-heading">Preuves / Traces</h4>
-                <a href="preuves/mission1/Plan_Situation_SAINT-PATERNE - LE CHEVAIN.pdf" target="_blank"
-                    class="proof-file-card">
-                    <div class="file-icon">📄</div>
-                    <div class="file-info">
-                        <span class="file-name">Plan_situation.pdf</span>
-                        <span class="file-desc">Cliquez pour consulter le document</span>
+            <div id="mission3" class="mission-panel fade-in">
+                <section class="mission-modern" style="margin-bottom:0; border:none; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    
+                    <div class="mission-header-modern">
+                        <div class="header-left">
+                            <span class="mission-label">Mission</span>
+                            <h3 class="mission-title-large">Reprise travaux d'enrobé</h3>
+                        </div>
+                        <div class="mission-number-large">03</div>
                     </div>
-                    <div class="file-arrow">→</div>
-                </a>
-                <a href="preuves/mission1/Plan_Projet_SAINT-PATERNE - LE CHEVAIN.pdf" target="_blank"
-                    class="proof-file-card">
-                    <div class="file-icon">📄</div>
-                    <div class="file-info">
-                        <span class="file-name">Plan_projet.pdf</span>
-                        <span class="file-desc">Cliquez pour consulter le document</span>
+
+                    <div class="mission-layout-grid">
+                        
+                        <div class="mission-content-main">
+                            
+                            <div class="content-block">
+                                <h4 class="modern-heading">Contexte & Objectifs</h4>
+                                <p>
+                                    <strong>Contexte :</strong> Intervention suite à la défaillance d'un prestataire n'ayant pas réalisé la réfection de la chaussée (enrobé) après travaux.
+                                    <br><strong>Mon rôle :</strong> Piloter intégralement la reprise du Génie Civil : de l'étude technique jusqu'au mandatement d'une nouvelle entreprise, en garantissant le respect des normes de voirie.
+                                </p>
+                            </div>
+
+                            <div class="content-block">
+                                <h4 class="modern-heading">Actions Réalisées</h4>
+                                <ul class="timeline-list">
+                                    <li>
+                                        <strong class="task-title">Analyse du Retour Travaux</strong>
+                                        <p class="task-desc">
+                                            Étude du dossier initial et constat des manquements (non-réalisation de l'enrobé) pour définir précisément le périmètre de la reprise nécessaire.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong class="task-title">Conception des Plans</strong>
+                                        <p class="task-desc">
+                                            Élaboration du Plan de Situation et du Plan Projet localisant les zones exactes de chaussée à reprendre pour guider l'équipe de voirie.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong class="task-title">Prescription Technique</strong>
+                                        <p class="task-desc">
+                                            Rédaction des documents techniques correctifs précisant les normes de Génie Civil à respecter pour la remise en état de la voirie.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong class="task-title">Valorisation Financière (GC)</strong>
+                                        <p class="task-desc">
+                                            Estimation du coût de la reprise en utilisant les bordereaux de prix spécifiques au Génie Civil (différents des forfaits réseau classiques).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong class="task-title">Commandite</strong>
+                                        <p class="task-desc">
+                                            Transmission de l'ordre de service et du dossier technique complet au nouveau prestataire partenaire.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong class="task-title">Suivi & Réception</strong>
+                                        <p class="task-desc">
+                                            Contrôle de la bonne exécution des travaux via l'analyse des photos et attachements post-intervention avant validation finale.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="content-block">
+                                <h4 class="modern-heading">Preuves / Traces</h4>
+                                <a href="preuves/mission3/ALM501289_plan_situation_Boulevard_de_lexpansion_argentan.pdf" target="_blank" class="proof-file-card">
+                                    <div class="file-icon">📄</div>
+                                    <div class="file-info">
+                                        <span class="file-name">Plan_situation.pdf</span>
+                                        <span class="file-desc">Localisation de la zone d'intervention</span>
+                                    </div>
+                                    <div class="file-arrow">→</div>
+                                </a>
+
+                                <a href="preuves/mission3/ALM501289_plan_projet_Boulevard_de_lexpansion_argentan.pdf" target="_blank" class="proof-file-card">
+                                    <div class="file-icon">📄</div>
+                                    <div class="file-info">
+                                        <span class="file-name">Plan_projet.pdf</span>
+                                        <span class="file-desc">Détails techniques pour la voirie</span>
+                                    </div>
+                                    <div class="file-arrow">→</div>
+                                </a>
+                                
+                                <a href="preuves/mission3/vue_en_plan_travaux_a_realiser.pdf" target="_blank" class="proof-file-card">
+                                    <div class="file-icon">📄</div>
+                                    <div class="file-info">
+                                        <span class="file-name">vue_en_plan_travaux.pdf</span>
+                                        <span class="file-desc">Schéma d'exécution</span>
+                                    </div>
+                                    <div class="file-arrow">→</div>
+                                </a>
+                            </div>
+
+                            <div class="analysis-card">
+                                <div class="analysis-text">
+                                    <h4>Auto-analyse & Progression</h4>
+                                    <p>
+                                        Cette mission m'a permis d'élargir mes compétences au-delà du réseau télécom pur, en découvrant les contraintes du <strong>Génie Civil</strong> et de la voirie.
+                                        J'ai également appris à manipuler des forfaits contractuels spécifiques que je ne connaissais pas.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <strong>Solutions apportées :</strong><br> 
+                                        Face à ma méconnaissance initiale des normes GC, j'ai fait preuve de curiosité en sollicitant l'expertise de mes collègues. Cela m'a permis de réaliser une valorisation financière juste et conforme aux attentes d'Orange.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <aside class="mission-sidebar">
+                            <div class="sidebar-sticky">
+
+                                <div class="sidebar-section">
+                                    <h4 class="sidebar-title">Compétences Mobilisées</h4>
+                                    <div class="skills-mosaic">
+                                        <div class="skill-box">RT1 niv1. Administrer Réseaux</div>
+                                        <div class="skill-box">RT2 niv1. Systèmes transmissions</div>
+                                        <div class="skill-box">RT3 niv1. Intégration services</div>
+                                    </div>
+                                </div>
+
+                                <div class="sidebar-divider"></div>
+
+                                <div class="sidebar-section">
+                                    <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
+                                    <ul class="ac-list-vertical">
+                                        <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un système informatique</span></li>
+                                        <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en équipe pour développer ses compétences</span></li>
+                                        <li><span class="ac-id">AC11.05</span><span class="ac-desc">Identifier les dysfonctionnements</span></li>
+                                        <li><span class="ac-id">AC22.05</span><span class="ac-desc">Questionner un cahier des charges</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+
                     </div>
-                    <div class="file-arrow">→</div>
-                </a>
-                <a href="preuves/mission1/Photo_retour_travaux.jpg" target="_blank" class="proof-file-card">
-                    <div class="file-icon">📄</div>
-                    <div class="file-info">
-                        <span class="file-name">Photo_retour_travaux.jpg</span>
-                        <span class="file-desc">Aperçu du chantier terminé</span>
-                    </div>
-                    <div class="file-arrow">→</div>
-                </a>
-            </div>
-
-            <div class="analysis-card">
-                <div class="analysis-text">
-                    <h4>Auto-analyse & Progression</h4>
-                    <p>
-                        Cette première mission a été mon point d'entrée dans le métier de
-                        Chargé d'Affaires.
-                        Au-delà de la maitrise des outils du SI Orange (<strong>Georéso, IPON</strong>....),
-                        j'ai
-                        surtout compris que la réussite d'un projet repose autant sur la rigueur technique
-                        que sur la <strong>communication</strong> avec les tiers.
-                    </p>
-                    <br>
-                    <p>
-                        <strong>Difficultés surmontées :</strong><br>
-                        En tant que débutant, j'ai d'abord eu des difficultés à structurer ma méthodologie. De
-                        plus, pour réaliser la valorisation des travaux, j'ai dû m'approprier les spécificités
-                        des forfaits contractuels utilisés entre Orange et ses partenaires pour ce type de
-                        chantier.
-                        J'ai également dû gérer des situations post-travaux : des non-conformités sur le
-                        chantier
-                        et des
-                        incohérences dans les <strong>attachements</strong> (demandes de facturation du
-                        prestataire).
-                    </p>
-                    <br>
-                    <p>
-                        <strong>Solutions apportées :</strong><br>
-                        J'ai co-construit avec mon tuteur pour gagner en autonomie un <strong>guide
-                            méthodologique</strong> étape par
-                        étape. Concernant les non-conformités, j'ai pris l'initiative de me déplacer sur site
-                        avec mon tuteur pour
-                        rectifier l'erreurs. Pour l'attachements erronés il fallait le refuser afin de ne pas
-                        valider une facturation incorrecte et attendre le retour du prestataire.
-                    </p>
-                </div>
-            </div>
-    </div>
-    <aside class="mission-sidebar">
-        <div class="sidebar-sticky">
-
-            <div class="sidebar-section">
-                <h4 class="sidebar-title">Compétences Mobilisées</h4>
-                <div class="skills-mosaic">
-                    <div class="skill-box">RT2 niv1. Systèmes de transmissions</div>
-                    <div class="skill-box">RT3 niv1. Intégration service info</div>
-                    <div class="skill-box">RT1 niv2. Administrer un Réseaux</div>
-                    <div class="skill-box">RT2 niv2. Solutions de connexion</div>
-                </div>
-            </div>
-
-            <div class="sidebar-divider"></div>
-
-            <div class="sidebar-section">
-                <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
-                <ul class="ac-list-vertical">
-                    <li><span class="ac-id">AC12.05</span><span class="ac-desc">Communiquer avec un tiers et
-                            adapter son discours</span></li>
-                    <li><span class="ac-id">AC12.03</span><span class="ac-desc">Déployer des supports de
-                            transmission</span></li>
-                    <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un système
-                            informatique et ses outils</span></li>
-                    <li><span class="ac-id">AC21.04</span><span class="ac-desc">Déployer des services
-                            réseaux avancés</span></li>
-                    <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en équipe pour
-                            développer ses compétences</span></li>
-                    <li><span class="ac-id">AC22.05</span><span class="ac-desc">Capacité à questionner un
-                            cahier des charges</span></li>
-                    <li><span class="ac-id">AC22.01</span><span class="ac-desc">Déployer et caractériser des
-                            systèmes de transmissions complexes</span></li>
-                </ul>
+                </section>
             </div>
 
         </div>
-    </aside>
-    </div>
-    </section>
-
-    <section id="mission2" class="mission-modern reveal">
-
-        <div class="mission-header-modern">
-            <div class="header-left">
-                <span class="mission-label">Mission</span>
-                <h3 class="mission-title-large">Reprise travaux</h3>
-            </div>
-            <div class="mission-number-large">02</div>
-        </div>
-
-        <div class="mission-layout-grid">
-
-            <div class="mission-content-main">
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Contexte & Objectifs</h4>
-                    <p>
-                        <strong>Contexte :</strong>Prise en charge de ma première <strong>reprise de
-                            travaux</strong> suite à des non-conformités lors de la réception d'un
-                        chantier précédent.
-                        <br><strong>Mon rôle :</strong> Réaliser la reprise des travaux non conformes (partis étude
-                        pour renvoyer en travaux) en respectant les normes en vigueur du RIP.
-                    </p>
-                </div>
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Tâches Réalisées</h4>
-                    <ul class="timeline-list">
-                        <li>Réalisation de l'Étude (analyse du retour travaux avec les non-conformités).</li>
-                        <li>Création du plan de situation et du plan Projet.</li>
-                        <li>Conception des documents techniques pour corrigé les non-conformités.</li>
-                        <li>Valorisation financière des travaux de reprise.</li>
-                        <li>Envoi des documents réalisés aux prestataires pour travaux.</li>
-                        <li>Suivi du chantier et réception (analyse du retour travaux).</li>
-                        <li>Clôture administrative et paiement du prestataire.</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Preuves / Traces</h4>
-
-                    <a href="preuves/mission2/ALM501239_Plan_Situation_L-OREE-D-ECOUVES.pdf" target="_blank"
-                        class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Plan_situation.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-
-                    <a href="preuves/mission2/ALM501239_Plan_Projet_L'OREE-D'ECOUVES.pdf" target="_blank"
-                        class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Plan_projet.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-
-                    <a href="preuves/mission2/Doc Mise en oeuvre RIP.pdf" target="_blank" class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Documentation_mise_en_oeuvre_RIP.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-
-                    <a href="preuves/mission2/Etiquetage TR.pdf" target="_blank" class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Exemple_doc_technique.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-
-                </div>
-
-                <div class="analysis-card">
-                    <div class="analysis-text">
-                        <h4>Auto-analyse & Progression</h4>
-                        <p>
-                            Cette première expérience en <strong>reprise de travaux</strong> a été très formatrice.
-                            Elle m'a permis de comprendre qu'un dossier ne s'arrête pas à l'étude initiale, mais
-                            nécessite un suivi rigoureux jusqu'à la conformité totale. J'ai découvert les
-                            spécificités des <strong>Réseaux d'Initiative Publique (RIP)</strong>.
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Difficultés surmontées :</strong><br>
-                            Ma principale difficulté résidait dans la méconnaissance initiale des règles
-                            d'ingénierie spécifiques à la mise en œuvre sur les réseaux RIP. De plus, lors de
-                            l'analyse du <strong>Retour Travaux</strong>, j'ai été confronté à des écarts
-                            techniques
-                            réalisés par le prestataire suite au travaux réalisés pour corriger les non-conformités.
-                            Part ailleurs, pour réaliser la valorisation des travaux, j'ai dû m'approprier les
-                            spécificités des forfaits contractuels utilisés entre Orange et ses partenaires pour ce
-                            type de chantier.
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Solutions apportées :</strong><br>
-                            Pour combler mes lacunes sur les RIP, j'ai fait preuve de <strong>curiosité</strong> en
-                            sollicitant mes
-                            référents, ce qui m'a permis d'apprendre rapidement. Par ailleurs, j'ai refusé la
-                            validation en l'état et demandé un renvoi en travaux pour correction, garantissant ainsi
-                            la conformité finale des travaux. Concernant la valorisation des travaux, j'ai étudié
-                            les forfait qui
-                            existe pour les RIP afin de réaliser une valorisation conforme au reprise en demandant
-                            conseille à mes collègues.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <aside class="mission-sidebar">
-                <div class="sidebar-sticky">
-
-                    <div class="sidebar-section">
-                        <h4 class="sidebar-title">Compétences Mobilisées</h4>
-                        <div class="skills-mosaic">
-                            <div class="skill-box">RT1 niv1. Administrer un Réseaux</div>
-                            <div class="skill-box">RT2 niv1. Systèmes de transmissions</div>
-                            <div class="skill-box">RT3 niv1. Intégration service info</div>
-                            <div class="skill-box">RT1 niv2. Administrer un Réseaux</div>
-                            <div class="skill-box">RT2 niv2. Solutions de connexion</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-divider"></div>
-
-                    <div class="sidebar-section">
-                        <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
-                        <ul class="ac-list-vertical">
-                            <li><span class="ac-id">AC11.05</span><span class="ac-desc">Identifier les
-                                    dysfonctionnements du réseau local et savoir les signaler</span></li>
-                            <li><span class="ac-id">AC12.05</span><span class="ac-desc">Communiquer avec un tiers et
-                                    adapter son discours</span></li>
-                            <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un système
-                                    informatique et ses outils</span></li>
-                            <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en équipe pour
-                                    développer ses compétences</span></li>
-                            <li><span class="ac-id">AC22.05</span><span class="ac-desc">Capacité à questionner un
-                                    cahier des charges</span></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </aside>
-
-        </div>
-    </section>
-
-    <section id="mission3" class="mission-modern reveal" style="border-bottom: none;">
-
-        <div class="mission-header-modern">
-            <div class="header-left">
-                <span class="mission-label">Mission</span>
-                <h3 class="mission-title-large">Reprise travaux d'enrobé</h3>
-            </div>
-            <div class="mission-number-large">03</div>
-        </div>
-
-        <div class="mission-layout-grid">
-
-            <div class="mission-content-main">
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Contexte & Objectifs</h4>
-                    <p>
-                        <strong>Contexte :</strong> Reprise de travaux d'enrobé suite à la non réalisation de
-                        l'enrobé part l'ancien prestataire.
-                        <br><strong>Mon rôle :</strong> Réaliser la reprise des travaux (partis étude
-                        pour renvoyer en travaux) en respectant les normes en vigueur pour le Génie Civil.
-                    </p>
-                </div>
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Actions Réalisées</h4>
-                    <ul class="timeline-list">
-                        <li>Réalisation de l'Étude (analyse du retour travaux avec les non-conformités).</li>
-                        <li>Création du plan de situation et du plan Projet.</li>
-                        <li>Conception des documents techniques pour corrigé les non-conformités.</li>
-                        <li>Valorisation financière des travaux de reprise.</li>
-                        <li>Envoi des documents réalisés aux prestataires pour travaux.</li>
-                        <li>Suivi du chantier</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h4 class="modern-heading">Preuves / Traces</h4>
-
-                    <a href="preuves/mission3/ALM501289_plan_situation_Boulevard_de_lexpansion_argentan.pdf"
-                        target="_blank" class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Plan_situation.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-
-                    <a href="preuves/mission3/ALM501289_plan_projet_Boulevard_de_lexpansion_argentan.pdf"
-                        target="_blank" class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">Plan_projet.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-                    <a href="preuves/mission3/vue_en_plan_travaux_a_realiser.pdf" target="_blank"
-                        class="proof-file-card">
-                        <div class="file-icon">📄</div>
-                        <div class="file-info">
-                            <span class="file-name">vue_en_plan_travaux_a_realiser.pdf</span>
-                            <span class="file-desc">Cliquez pour consulter le document</span>
-                        </div>
-                        <div class="file-arrow">→</div>
-                    </a>
-                </div>
-
-                <div class="analysis-card">
-                    <div class="analysis-text">
-                        <h4>Auto-analyse & Progression</h4>
-                        <p>
-                            Cette mission de reprise de travaux d'enrobé m'a permis de renforcer mes compétences en
-                            gestion de projet et en communication avec les prestataires.
-                            J'ai découvert l'ingénierie spécifique au génie civil dans le cadre des réseaux de
-                            télécommunications. Et les forfaits contractuels utilisés entre Orange et ses
-                            partenaires pour ce type de chantier.
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Difficultés surmontées :</strong><br> J'ai dû faire face à des défis liés à la
-                            compréhension des normes de génie civil qui m'étaient initialement inconnues. De plus,
-                            pour la valorisation des travaux, j'ai dû m'approprier
-                            les spécificités des forfaits contractuels utilisés entre Orange et ses partenaires pour
-                            ce type de chantier (GC).
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Solutions apportées :</strong><br> Pour combler mes lacunes en génie civil, j'ai
-                            sollicité l'aide de mes collègues et j'ai su être curieux pour apprendre rapidement et
-                            devenir autonome.
-                            Concernant la valorisation des travaux, j'ai étudié les forfait qui existe pour le GC
-                            afin de réaliser une valorisation conforme au reprise en demandant conseille à mes
-                            collègues.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <aside class="mission-sidebar">
-                <div class="sidebar-sticky">
-
-                    <div class="sidebar-section">
-                        <h4 class="sidebar-title">Compétences Mobilisées</h4>
-                        <div class="skills-mosaic">
-                            <div class="skill-box">RT1 niv1. Administrer un Réseaux</div>
-                            <div class="skill-box">RT2 niv1. Systèmes de transmissions</div>
-                            <div class="skill-box">RT3 niv1. Intégration service info</div>
-                            <div class="skill-box">RT1 niv2. Administrer un Réseaux</div>
-                            <div class="skill-box">RT2 niv2. Solutions de connexion</div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-divider"></div>
-
-                    <div class="sidebar-section">
-                        <h4 class="sidebar-title">Apprentissages Critiques (AC)</h4>
-                        <ul class="ac-list-vertical">
-                            <li><span class="ac-id">AC11.05</span><span class="ac-desc">Identifier les
-                                    dysfonctionnements du réseau et savoir les signaler</span></li>
-                            <li><span class="ac-id">AC12.05</span><span class="ac-desc">Communiquer avec un tiers et
-                                    adapter son discours</span></li>
-                            <li><span class="ac-id">AC13.01</span><span class="ac-desc">Utiliser un système
-                                    informatique et ses outils</span></li>
-                            <li><span class="ac-id">AC21.06</span><span class="ac-desc">Travailler en équipe pour
-                                    développer ses compétences</span></li>
-                            <li><span class="ac-id">AC22.05</span><span class="ac-desc">Capacité à questionner un
-                                    cahier des charges</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-
-        </div>
-    </section>
-
     </div>
 
     <footer>

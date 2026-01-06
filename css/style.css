@@ -668,5 +668,92 @@ footer {
 .summary-list a:hover::before {
     width: 100%; /* La ligne se dessine sous le texte */
 }
-/* ... (Le contenu précédent reste identique) ... */
 
+
+/* --- STYLE ACCORDÉON (Dossiers Dépliants) --- */
+.accordion-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+
+/* L'en-tête (la barre sur laquelle on clique) */
+.accordion-header {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 25px 30px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #fdfdfd;
+}
+
+/* Quand l'item est ouvert */
+.accordion-item.open .accordion-header {
+    background: #fff8f0; /* Fond orange très léger */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.acc-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.acc-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #eee;
+    transition: color 0.3s;
+}
+
+.accordion-item.open .acc-number {
+    color: var(--orange-brand);
+}
+
+.acc-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+
+.acc-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--mid-grey);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.open .acc-icon {
+    transform: rotate(45deg); /* Le + devient une croix */
+    color: var(--orange-brand);
+}
+
+/* Le contenu caché */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Animation fluide */
+    background: #fff;
+}
+
+.accordion-inner {
+    padding: 40px;
+    border-top: 1px solid transparent;
+}

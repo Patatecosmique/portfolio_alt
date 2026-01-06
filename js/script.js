@@ -42,3 +42,30 @@ const scrollReveal = () => {
 // Lancer les fonctions
 navSlide();
 window.addEventListener('scroll', scrollReveal);
+
+
+
+function toggleAccordion(id) {
+    const item = document.getElementById(id);
+    const content = item.querySelector('.accordion-content');
+    
+    // Vérifie si l'item est déjà ouvert
+    const isOpen = item.classList.contains('open');
+
+    // Optionnel : Fermer tous les autres (Mode "Accordéon strict")
+    // Si tu veux pouvoir en ouvrir plusieurs à la fois, supprime ces 4 lignes :
+    document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.accordion-content').style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+        item.classList.add('open');
+        // On définit la hauteur max sur la hauteur réelle du contenu
+        content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+        // Si c'était déjà ouvert, on ferme (si tu as supprimé le bloc optionnel au-dessus)
+        item.classList.remove('open');
+        content.style.maxHeight = null;
+    }
+}
