@@ -41,80 +41,38 @@
 
         <div class="mission-header-modern">
             <div class="header-left">
-                <span class="mission-label">Savoir-Faire</span>
-                <h3 class="mission-title-large">Environnement, Finance & Technique</h3>
+                <span class="mission-label">Compétences Clés</span>
+                <h3 class="mission-title-large">Architecture FTTH & Environnement du SI</h3>
             </div>
         </div>
 
         <div class="mission-layout-grid">
 
             <div class="mission-content-main">
-
-                <div class="content-block finance-block">
-                    <h4 class="finance-title">📌 Contexte & Mécanisme Financier</h4>
-
-                    <div style="margin-bottom: 25px;">
-                        <p style="margin-bottom: 10px;">Avant d'aborder la technique, il est crucial de maîtriser le
-                            cadre spécifique de mes missions :</p>
-                        <ul class="ac-list-vertical" style="background:none; padding:0; box-shadow:none;">
-                            <li style="margin-bottom: 10px; border:none; padding:0;">
-                                <span class="ac-id"
-                                    style="color:var(--black); background:#fff; border:1px solid #ddd;">Zone RIP</span>
-                                <span class="ac-desc">Respect des règles d'ingénierie strictes (étiquetage, fixations)
-                                    propres aux Réseaux d'Initiative Publique.</span>
-                            </li>
-                            <li style="border:none; padding:0;">
-                                <span class="ac-id"
-                                    style="color:var(--black); background:#fff; border:1px solid #ddd;">Finance</span>
-                                <span class="ac-desc">Application des forfaits unitaires (Câblage vs Génie Civil) pour
-                                    la facturation.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="finance-divider"></div>
-
-                    <h5 style="color: var(--dark-grey); margin-bottom: 15px; font-size: 1rem;">Le Cycle de Facturation
-                        (Valorisation vs Attachements)</h5>
-                    <div class="finance-flow">
-                        <div class="flow-step">
-                            <div class="flow-icon">📝</div>
-                            <strong>1. Valorisation</strong>
-                            <span>(La Commande)</span>
-                            <p>Estimation théorique (Devis) via les codes marchés (ex: PFC03).</p>
-                        </div>
-                        <div class="flow-arrow">➜</div>
-                        <div class="flow-step">
-                            <div class="flow-icon">🚧</div>
-                            <strong>2. Travaux</strong>
-                            <span>(La Réalité)</span>
-                            <p>Réalisation chantier avec gestion des aléas terrain.</p>
-                        </div>
-                        <div class="flow-arrow">➜</div>
-                        <div class="flow-step">
-                            <div class="flow-icon">🧾</div>
-                            <strong>3. Attachements</strong>
-                            <span>(La Facture)</span>
-                            <p>Vérification de la facturation prestataire avant paiement.</p>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="content-block">
-                    <h4 class="modern-heading">Architecture de la Boucle Locale Optique</h4>
+
                     <p style="margin-bottom: 30px; color: var(--dark-grey);">
-                        Une fois le cadre posé, voici l'ingénierie physique du réseau (FTTH/FTTE) :
+                        La majorité de mes missions concerne le déploiement du réseau <strong>FTTH (Fiber To The Home)
+                            et bientôt le FTTE (Fiber To The Enterprise)</strong>.
+                        Pour concevoir un raccordement, il est obligatoire de maîtriser l'architecture complète du
+                        réseau, du cœur jusqu'à l'abonné du moins savoir comment cela fonctionne.
+                        Voici les 4 points clés de l'ingénierie fibre sur lesquels j'interviens :
                     </p>
 
                     <div class="network-schema">
+
                         <div class="fiber-line"></div>
 
                         <div class="schema-step">
                             <div class="step-icon">🏢</div>
                             <div class="step-card">
                                 <h4 class="step-title">1. Le NRO (Nœud de Raccordement Optique)</h4>
-                                <p class="step-desc">C'est le "cœur" du réseau local (OLT). Je dois identifier le NRO de
-                                    rattachement pour assurer la continuité du signal.</p>
+                                <p class="step-desc">
+                                    C'est le "cœur" du réseau local. Il abrite les équipements actifs (OLT) qui émettent
+                                    le signal laser.
+                                    Dans mes études, je dois identifier de quel NRO dépend les adresses à raccorder pour
+                                    assurer la continuité et savoir d'où vien la fibre.
+                                </p>
                             </div>
                         </div>
 
@@ -122,8 +80,13 @@
                             <div class="step-icon">🚪</div>
                             <div class="step-card">
                                 <h4 class="step-title">2. Le PM (Point de Mutualisation)</h4>
-                                <p class="step-desc">L'armoire de rue. Je vérifie impérativement la capacité (positions
-                                    libres) entre l'opérateur d'immeuble et l'opérateur commercial.</p>
+                                <p class="step-desc">
+                                    Souvent une armoire de rue. C'est l'interface entre l'Opérateur d'Infrastructure
+                                    (qui pose la fibre) et les Opérateurs Commerciaux (Orange, Free, etc.).
+                                    Mes dossiers de raccordement doivent garantir qu'il reste de la capacité (des
+                                    positions libres) dans ce PM et déterminer si il ya des positions disponibles pour
+                                    mes dossier.
+                                </p>
                             </div>
                         </div>
 
@@ -131,9 +94,13 @@
                             <div class="step-icon">📦</div>
                             <div class="step-card">
                                 <h4 class="step-title">3. Le PB (Point de Branchement Optique)</h4>
-                                <p class="step-desc">Boîtier en chambre ou poteau. <strong>Mon point de travail
-                                        principal :</strong> Je définis quel PB dessert la maison et je dimensionne le
-                                    câble de distribution.</p>
+                                <p class="step-desc">
+                                    C'est le boîtier situé au plus près des logements (sur un poteau, en façade ou en
+                                    chambre souterraine).
+                                    <strong>C'est mon point de travail principal :</strong> je dois définir quel PB va
+                                    desservir la/les nouvelle maison et vérifier s'il faut tirer un nouveau câble de
+                                    distribution et/ou ajouté des PBs.
+                                </p>
                             </div>
                         </div>
 
@@ -141,10 +108,14 @@
                             <div class="step-icon">🏠</div>
                             <div class="step-card">
                                 <h4 class="step-title">4. La PTO (Prise Terminale Optique)</h4>
-                                <p class="step-desc">Chez le client. Je prévois le cheminement (adduction) pour
-                                    faciliter le travail du technicien final.</p>
+                                <p class="step-desc">
+                                    Le point final chez le client. Mon rôle d'étude s'arrête techniquement à la limite
+                                    de propriété, mais je dois faire en sorte que les techniciens puissent installer la
+                                    fibre sans trop de difficultés en posant les PBs de manière optimale.
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -157,62 +128,57 @@
                             style="color: var(--orange-brand); border-bottom: none; margin-bottom: 20px;">Outils du SI
                             Orange</h4>
                         <div class="tools-list">
-
                             <div class="tool-item">
-                                <span class="tool-icon">🗺️</span>
+
                                 <div>
                                     <strong>Géoréso</strong>
                                     <span class="tool-sub">Cartographie des réseaux RIP et Orange en France.</span>
                                 </div>
                             </div>
-
                             <div class="tool-item">
-                                <span class="tool-icon">🗄️</span>
+
                                 <div>
                                     <strong>IPON</strong>
-                                    <span class="tool-sub">Base de données (équipements, câbles, fibres,
-                                        immeubles...).</span>
+                                    <span class="tool-sub">Base de données des ressources (câbles, fibres,
+                                        équipements).</span>
                                 </div>
                             </div>
-
                             <div class="tool-item">
-                                <span class="tool-icon">💶</span>
+
                                 <div>
                                     <strong>GDP</strong>
-                                    <span class="tool-sub">Application type Minitel pour réaliser les valorisations et
-                                        payer les attachements.</span>
+                                    <span class="tool-sub">Application type Minitel pour la valorisation et le paiement
+                                        des attachements.</span>
                                 </div>
                             </div>
-
                             <div class="tool-item">
-                                <span class="tool-icon">🏗️</span>
-                                <div>
-                                    <strong>Tigre</strong>
-                                    <span class="tool-sub">Consultation/Modification du Génie Civil (GC) Orange ou
-                                        RIP.</span>
-                                </div>
-                            </div>
 
-                            <div class="tool-item">
-                                <span class="tool-icon">📊</span>
-                                <div>
-                                    <strong>Excel</strong>
-                                    <span class="tool-sub">Création de synoptiques, tableaux récapitulatifs,
-                                        suivi...</span>
-                                </div>
-                            </div>
-
-                            <div class="tool-item">
-                                <span class="tool-icon">📂</span>
                                 <div>
                                     <strong>Gedaffaires</strong>
                                     <span class="tool-sub">Suivi d'avancement (Étude/Travaux), consultation et archivage
                                         des dossiers.</span>
                                 </div>
                             </div>
+                            <div class="tool-item">
 
+                                <div>
+                                    <strong>Tigre</strong>
+                                    <span class="tool-sub">Consultation et modification du Génie Civil (GC) Orange ou
+                                        RIP.</span>
+                                </div>
+                            </div>
+                            <div class="tool-item">
+
+                                <div>
+                                    <strong>Excel</strong>
+                                    <span class="tool-sub">Création de synoptiques, tableaux récapitulatifs et
+                                        suivi.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="sidebar-divider"></div>
 
                 </div>
             </aside>
@@ -221,7 +187,9 @@
     </section>
 
     <div class="section-padding" style="background-color: #fafafa; padding-top: 40px;">
+
         <h3 class="section-title" style="margin-bottom: 40px;">Détails des Projets</h3>
+
         <div class="accordion-container reveal">
 
             <div class="accordion-item" id="acc-mission1">
@@ -252,29 +220,63 @@
                                                 class="task-desc">L'objectif est d'analyser l'infrastructure réseau
                                                 existante pour identifier le point de raccordement optimal via les
                                                 outils du SI (Géoréso, IPON). Je vérifie plusieurs points : y a-t-il une
-                                                saturation du réseau ? Reste-t-il des fibres libres ? Je dimensionne les
-                                                nouveaux câbles et les équipements (PBO).</span></li>
+                                                saturation du réseau (plus de place dans les équipements) ? Reste-t-il
+                                                des fibres libres dans les équipements déjà posés et lesquelles ? Je
+                                                détermine également s'il faut poser de nouveaux câbles, leurs dimensions
+                                                (nombre de fibres) et je prévois le dimensionnement des équipements (ex:
+                                                combien de maisons desservira un Point de Branchement) en respectant les
+                                                règles d'ingénierie. Part exemple pour ce chantier on a fait le choix avec mon tuteur de 
+                                                poser un cable de 12 fibres pour raccorder le lotissement.</span></li
                                         <li><strong class="task-title">Mise à jour SI</strong> <span
-                                                class="task-desc">Création du projet dans les bases de données d'Orange.
-                                                Utilisation de <strong>Géoréso</strong> pour le tracé infra et
-                                                <strong>IPON</strong> pour la réservation des ressources.</span></li>
+                                                class="task-desc">Création du projet dans les bases de données d'Orange
+                                                pour référencer les futurs équipements. Pour la partie infrastructure,
+                                                j'utilise <strong>Géoréso</strong> pour dessiner le projet (câbles,
+                                                matériel...). Pour la partie disponibilité et capacité (savoir si le
+                                                réseau est saturé), j'utilise l'application <strong>IPON</strong> pour y
+                                                créer le projet et réserver les ressources.</span></li>
                                         <li><strong class="task-title">Conception des Plans</strong> <span
-                                                class="task-desc">Réalisation du plan de situation et du plan Projet sur
-                                                Adobe PDF pour guider les techniciens.</span></li>
+                                                class="task-desc">Réalisation du plan de situation et du plan projet sur
+                                                Adobe PDF c( <em>cf : Plan situation, Plan projet</em> ). Ces plans ont
+                                                pour but de guider les techniciens pour qu'ils
+                                                réalisent les travaux en bonne et due forme. Le <strong>plan de
+                                                    situation</strong> donne un aperçu global de la zone de travaux,
+                                                tandis que le <strong>plan projet</strong> fournit les détails
+                                                techniques précis. Sur ce dossier, j'ai généré le fond de plan à partir
+                                                de ma conception sur Géoréso (tracé du câble de distribution), puis j'y
+                                                ai ajouté les annotations techniques nécessaires aux techniciens.</span>
+                                        </li>
                                         <li><strong class="task-title">Valorisation</strong> <span
-                                                class="task-desc">Estimation du coût via l'outil <strong>GDP</strong>.
-                                                Sélection des forfaits (ex: <strong>PFC03</strong> pour le câble,
-                                                <strong>IMZ0</strong> pour les mesures).</span></li>
+                                                class="task-desc">Estimation du coût des travaux via l'outil
+                                                <strong>GDP</strong>. Je dois sélectionner dans le catalogue des
+                                                forfaits contractuels ("ACF01") l'article le plus approprié à l'action
+                                                demandée. Par exemple, pour la pose du câble de distribution, j'ai
+                                                sélectionné le forfait <strong>PFC03</strong> (pose de câble optique
+                                                aérien ou conduite) en détaillant le métré. De même, pour les mesures de
+                                                Réflectométrie au Point de Mutualisation (PM) demandées dans le plan,
+                                                j'ai ajouté le forfait spécifique <strong>IMZ0</strong>.</span></li>
                                         <li><strong class="task-title">Commandite</strong> <span
-                                                class="task-desc">Transmission du dossier complet au prestataire via
-                                                <strong>LINE</strong> pour planification des travaux.</span></li>
+                                                class="task-desc">Transmission du dossier technique complet (Plan
+                                                situation, Plan projet, Valorisation et documents complémentaires) au
+                                                prestataire via l'application <strong>LINE</strong>. Une fois le dossier
+                                                reçu, le prestataire mandate un technicien pour effectuer les travaux
+                                                sur le terrain.</span></li>
                                         <li><strong class="task-title">Suivi & Réception</strong> <span
-                                                class="task-desc">Contrôle de la conformité via l'analyse du "Retour
-                                                Travaux" (photos, métrés). Validation technique (passage gaines) et
-                                                administrative.</span></li>
-                                        <li><strong class="task-title">Clôture</strong> <span
-                                                class="task-desc">Validation finale des attachements, déclenchement du
-                                                paiement et archivage via <strong>Gedaffaires</strong>.</span></li>
+                                                class="task-desc">Contrôle de la conformité du chantier via l'analyse du
+                                                "Retour Travaux" (RET) envoyé par le technicien sur LINE (photos,
+                                                métrés). Je valide ou non la conformité en comparant ce qui à était
+                                                réalisé avec ce que j'ai demandé initialement. Par exemple, sur la photo
+                                                de retour
+                                                travaux (<em> cf : Photo_retour_travaux</em>), on distingue bien une
+                                                gaine verte passant dans la dernière chambre de raccordement, ce qui me
+                                                confirme que le tirage a été effectué correctement. Je vérifie
+                                                l'intégralité du parcours grâce à l'ensemble des photos fournies pour
+                                                chaque chambre.</span></li>
+                                        <li><strong class="task-title">Clôture</strong> <span class="task-desc">Si le
+                                                RET est validé, je procède à la validation finale des attachements et au
+                                                déclenchement du paiement du prestataire. En cas d'erreur sur les
+                                                travaux ou la facturation, je rejette la demande pour correction. Une
+                                                fois tout validé, le dossier est archivé via l'outil
+                                                <strong>GDP</strong>.</span></li>
                                     </ul>
                                 </div>
                                 <div class="content-block">
@@ -282,20 +284,23 @@
                                     <a href="preuves/mission1/Plan_Situation_SAINT-PATERNE - LE CHEVAIN.pdf"
                                         target="_blank" class="proof-file-card">
                                         <div class="file-icon">📄</div>
-                                        <div class="file-info"><span class="file-name">Plan_situation.pdf</span></div>
+                                        <div class="file-info"><span class="file-name">Plan_situation.pdf</span><span
+                                                class="file-desc">Cliquez pour consulter le document</span></div>
                                         <div class="file-arrow">→</div>
                                     </a>
                                     <a href="preuves/mission1/Plan_Projet_SAINT-PATERNE - LE CHEVAIN.pdf"
                                         target="_blank" class="proof-file-card">
                                         <div class="file-icon">📄</div>
-                                        <div class="file-info"><span class="file-name">Plan_projet.pdf</span></div>
+                                        <div class="file-info"><span class="file-name">Plan_projet.pdf</span><span
+                                                class="file-desc">Cliquez pour consulter le document</span></div>
                                         <div class="file-arrow">→</div>
                                     </a>
-                                    <a href="preuves/mission1/Photo_retour_travaux.jpg" target="_blank"
+                                    <a href="preuves/mission1/photo_retour_travaux.jpg" target="_blank"
                                         class="proof-file-card">
                                         <div class="file-icon">📄</div>
-                                        <div class="file-info"><span class="file-name">Photo_retour_travaux.jpg</span>
-                                        </div>
+                                        <div class="file-info"><span
+                                                class="file-name">Photo_retour_travaux.jpg</span><span
+                                                class="file-desc">Aperçu du chantier terminé</span></div>
                                         <div class="file-arrow">→</div>
                                     </a>
                                 </div>
@@ -303,24 +308,27 @@
                                     <div class="analysis-text">
                                         <h4>Auto-analyse & Progression</h4>
                                         <p>Cette première mission a été mon point d'entrée dans le métier de Chargé
-                                            d'Affaires. Elle m'a permis de renforcer mes compétences en gestion de
-                                            projet. Au-delà de la maîtrise des outils du SI Orange (<strong>Georéso,
-                                                IPON</strong>...), j'ai surtout compris que la réussite d'un projet
+                                            d'Affaires. Au-delà de la maitrise des outils du SI Orange (<strong>Georéso,
+                                                IPON</strong>....), j'ai surtout compris que la réussite d'un projet
                                             repose autant sur la rigueur technique que sur la
-                                            <strong>communication</strong>.</p>
+                                            <strong>communication</strong> avec les tiers.
+                                        </p>
                                         <br>
                                         <p><strong>Difficultés surmontées :</strong><br>En tant que débutant, j'ai
                                             d'abord eu des difficultés à structurer ma méthodologie. De plus, pour
                                             réaliser la valorisation des travaux, j'ai dû m'approprier les spécificités
-                                            des forfaits contractuels. J'ai également dû gérer des situations
-                                            post-travaux : des non-conformités et des incohérences dans les
-                                            <strong>attachements</strong>.</p>
+                                            des forfaits contractuels utilisés entre Orange et ses partenaires pour ce
+                                            type de chantier. J'ai également dû gérer des situations post-travaux : des
+                                            non-conformités sur le chantier et des incohérences dans les
+                                            <strong>attachements</strong> (demandes de facturation du prestataire).
+                                        </p>
                                         <br>
                                         <p><strong>Solutions apportées :</strong><br>J'ai co-construit avec mon tuteur
-                                            un <strong>guide méthodologique</strong> étape par étape. Concernant les
-                                            non-conformités, j'ai pris l'initiative de me déplacer sur site avec mon
-                                            tuteur pour rectifier l'erreur. Pour les attachements erronés, j'ai dû
-                                            refuser la validation pour garantir une facturation correcte.</p>
+                                            pour gagner en autonomie un <strong>guide méthodologique</strong> étape par
+                                            étape. Concernant les non-conformités, j'ai pris l'initiative de me déplacer
+                                            sur site avec mon tuteur pour rectifier l'erreurs. Pour l'attachements
+                                            erronés il fallait le refuser afin de ne pas valider une facturation
+                                            incorrecte et attendre le retour du prestataire.</p>
                                     </div>
                                 </div>
                             </div>
@@ -381,13 +389,14 @@
                                             travaux</strong> suite à des non-conformités lors de la réception d'un
                                         chantier précédent.<br>
                                         <strong>Mon rôle :</strong> Réaliser la reprise des travaux non conformes
-                                        (partie étude pour renvoyer en travaux) en respectant les normes en vigueur du
-                                        RIP.
+                                        (partis étude pour renvoyer en travaux) en respectant les normes en vigueur du
+                                        RIP en semi-autonomie.
                                     </p>
                                 </div>
                                 <div class="content-block">
                                     <h4 class="modern-heading">Tâches Réalisées</h4>
                                     <ul class="timeline-list">
+
                                         <li>
                                             <strong class="task-title">Analyse du Retour Travaux</strong>
                                             <span class="task-desc">
@@ -399,6 +408,7 @@
                                                 nécessitant une reprise complète.
                                             </span>
                                         </li>
+
                                         <li>
                                             <strong class="task-title">Conception des Plans</strong>
                                             <span class="task-desc">
@@ -411,6 +421,7 @@
                                                 pour les reprises à effectuer.
                                             </span>
                                         </li>
+
                                         <li>
                                             <strong class="task-title">Documentation Technique</strong>
                                             <span class="task-desc">
@@ -425,6 +436,7 @@
                                                 (<em>cf : Exemple_doc_technique</em>).
                                             </span>
                                         </li>
+
                                         <li>
                                             <strong class="task-title">Valorisation Financière</strong>
                                             <span class="task-desc">
@@ -432,12 +444,14 @@
                                                 catalogue de prix
                                                 <strong>détaillé</strong> ("ACD01"). Au sein de celui-ci, j'ai choisi
                                                 plusieurs forfaits en fonction
-                                                des <strong>travaux à réaliser</strong>. Par exemple, pour l'étiquetage,
-                                                j'ai pris le forfait <strong>"4E918"</strong>,
+                                                des <strong>travaux à réaliser</strong>.
+                                                Par exemple, pour l'étiquetage, j'ai pris le forfait
+                                                <strong>"4E918"</strong>,
                                                 et <strong>par exemple</strong> pour l'intervention sur le matériel
                                                 c'est <strong>"ISB03"</strong>.
                                             </span>
                                         </li>
+
                                         <li>
                                             <strong class="task-title">Commandite</strong>
                                             <span class="task-desc">
@@ -446,6 +460,7 @@
                                                 et l'intervention des techniciens.
                                             </span>
                                         </li>
+
                                         <li>
                                             <strong class="task-title">Suivi & Réception</strong>
                                             <span class="task-desc">
@@ -457,6 +472,7 @@
                                                 travaux.
                                             </span>
                                         </li>
+
                                     </ul>
                                 </div>
                                 <div class="content-block">
@@ -495,39 +511,35 @@
                                 <div class="analysis-card">
                                     <div class="analysis-text">
                                         <h4>Auto-analyse & Progression</h4>
-                                        <p>
-                                            Cette première expérience en <strong>reprise de travaux</strong> a été
-                                            formatrice.
-                                            Elle m'a permis de comprendre qu'un dossier ne s'arrête pas à l'étude
-                                            initiale, mais nécessite un suivi rigoureux jusqu'à la conformité totale.
-                                            J'ai découvert les spécificités des <strong>Réseaux d'Initiative Publique
-                                                (RIP)</strong>.
+                                        <p>Cette première expérience en <strong>reprise de travaux</strong> a été
+                                            un premier pas dans les reprises travaux. Elle m'a permis découvrir comment
+                                            procéder
+                                            pour renvoyer un chantier en travaux suite à des non-conformités
+                                            identifiées.
+                                            De plus cela ma permis de découvrir les spécificités des <strong>Réseaux
+                                                d'Initiative
+                                                Publique (RIP) qui n'utilise pas les mêmes règles d'ingénierie</strong>.
                                         </p>
                                         <br>
-                                        <p>
-                                            <strong>Difficultés surmontées :</strong><br>
-                                            Ma principale difficulté résidait dans la méconnaissance initiale des règles
-                                            d'ingénierie spécifiques à la mise en œuvre sur les réseaux RIP.
-                                            De plus, lors de l'analyse du <strong>Retour Travaux</strong>, j'ai été
-                                            confronté à des écarts techniques réalisés par le prestataire suite aux
-                                            travaux correctifs.
-                                            <strong>Par ailleurs</strong>, pour réaliser la valorisation des travaux,
+                                        <p><strong>Difficultés surmontées :</strong><br>Ma principale difficulté
+                                            résidait dans la méconnaissance initiale des règles d'ingénierie spécifiques
+                                            à la mise en œuvre sur les réseaux RIP. De plus, lors de l'analyse du
+                                            <strong>Retour Travaux</strong>, j'ai été confronté à des écarts techniques
+                                            réalisés par le prestataire suite au travaux qui avait pour but de corriger
+                                            les
+                                            non-conformités initial. Part ailleurs, pour réaliser la valorisation,
                                             j'ai dû m'approprier les spécificités des forfaits contractuels utilisés
                                             entre Orange et ses partenaires pour ce type de chantier.
                                         </p>
                                         <br>
-                                        <p>
-                                            <strong>Solutions apportées :</strong><br>
-                                            Pour combler mes lacunes sur les RIP, j'ai fait preuve de
-                                            <strong>curiosité</strong> en sollicitant mes référents, ce qui m'a permis
-                                            d'apprendre rapidement.
-                                            J'ai refusé la validation en l'état et demandé un renvoi en travaux pour
-                                            correction, garantissant ainsi la conformité finale.
-                                            Concernant la valorisation, j'ai étudié <strong>les forfaits qui
-                                                existent</strong> pour les RIP afin de réaliser une valorisation
-                                            conforme <strong>à la reprise</strong> en demandant <strong>conseil</strong>
-                                            à mes collègues.
-                                        </p>
+                                        <p><strong>Solutions apportées :</strong><br>Pour combler mes lacunes sur les
+                                            RIP, j'ai fait preuve de <strong>curiosité</strong> en sollicitant mes
+                                            référents, ce qui m'a permis d'apprendre rapidement. Par ailleurs, j'ai
+                                            refusé la validation en l'état et demandé un renvoi en travaux pour
+                                            correction, garantissant ainsi la conformité finale des travaux. Concernant
+                                            la valorisation des travaux, j'ai étudié les forfait qui existe pour les RIP
+                                            afin de réaliser une valorisation conforme au reprise en demandant conseille
+                                            à mes collègues.</p>
                                     </div>
                                 </div>
                             </div>
@@ -571,7 +583,7 @@
                 <button class="accordion-header" onclick="toggleAccordion('acc-mission3')">
                     <div class="acc-left">
                         <span class="acc-number">03</span>
-                        <h3 class="acc-title">Reprise travaux Génie Civil (GC)</h3>
+                        <h3 class="acc-title">Reprise travaux Génie Civil</h3>
                     </div>
                     <div class="acc-icon">+</div>
                 </button>
@@ -583,51 +595,76 @@
                                 <div class="content-block">
                                     <h4 class="modern-heading">Contexte & Objectifs</h4>
                                     <p><strong>Contexte :</strong> Reprise de travaux d'enrobé suite à la non
-                                        réalisation de l'enrobé <strong>par</strong> l'ancien prestataire.<br>
+                                        réalisation de l'enrobé part l'ancien prestataire.<br>
                                         <strong>Mon rôle :</strong> Réaliser la reprise des travaux que j'ai fait en
-                                        autonomie (partie étude pour renvoyer en travaux) en respectant les normes en
+                                        autonomie (partis étude pour renvoyer en travaux) en respectant les normes en
                                         vigueur pour le Génie Civil.
                                     </p>
                                 </div>
                                 <div class="content-block">
                                     <h4 class="modern-heading">Tâches Réalisées</h4>
                                     <ul class="timeline-list">
-                                        <li><strong class="task-title">Analyse du Retour Travaux</strong> <span
-                                                class="task-desc">Étude du dossier initial et constat des
-                                                non-conformités pour définir précisément le périmètre de la reprise
-                                                nécessaire. Ici il s'agissait de la non-réalisation de l'enrobé sur une
-                                                portion de voirie.</span></li>
-                                        <li><strong class="task-title">Conception des Plans</strong> <span
-                                                class="task-desc">Élaboration du Plan de Situation et du Plan Projet
-                                                (<em>cf : Plan_situation / Plan_projet </em>) localisant les zones
-                                                exactes de chaussée à reprendre avec mes annotations pour guider
-                                                l'équipe de techniciens.</span></li>
-                                        <li><strong class="task-title">Prescription Technique</strong> <span
-                                                class="task-desc">Rédaction des documents techniques (<em>cf :
-                                                    vue_en_plan_travaux </em>) correctifs précisant les normes de Génie
-                                                Civil à respecter pour la remise en état de la voirie. Ici il s'agissait
-                                                de réaliser un enrobé sur 6 cm sur 30 mètres avec un joint à l'émulsion.
-                                                Ce joint <strong>est</strong> comme du silicone mais ici noir et
-                                                <strong>liquide</strong> et il permet de faire la jointure entre
-                                                l'ancien <strong>enrobé</strong> et le <strong>nouveau</strong>. Cela
-                                                <strong>évite</strong> que <strong>dès</strong> qu'il fait froid et que
-                                                <strong>ça gèle</strong> cela crée des fissures.</span></li>
-                                        <li><strong class="task-title">Valorisation Financière (GC)</strong> <span
-                                                class="task-desc">Estimation du coût de la reprise en utilisant le
-                                                catalogue de forfaits spécifiques au Génie Civil (différents des
-                                                forfaits classiques). Pour le GC on utilise le catalogue "GCD02" qui est
-                                                spécifique au génie civil, et pour ce type de travaux j'ai
-                                                <strong>utilisé</strong> le forfait "REDEX" qui prend en compte le
-                                                revêtement de surface.</span></li>
-                                        <li><strong class="task-title">Commandite</strong> <span
-                                                class="task-desc">Transmission des documents (Plan de situation et Plan
-                                                projet et le vue en plan travaux) complet au prestataire via LINE pour
-                                                qu'il puisse planifier et exécuter les travaux de reprise
-                                                <strong>par</strong> l'équipe de techniciens.</span></li>
-                                        <li><strong class="task-title">Suivi & Réception</strong> <span
-                                                class="task-desc">Actuellement en attente du Retour Travaux suite à
-                                                l'intervention du prestataire pour vérifier la conformité des travaux
-                                                réalisés.</span></li>
+
+                                        <li>
+                                            <strong class="task-title">Analyse du Retour Travaux</strong>
+                                            <span class="task-desc">
+                                                Étude approfondie du dossier initial et identification des manquements.
+                                                Ici, le constat portait sur la <strong>non-réalisation de
+                                                    l'enrobé</strong> sur une portion de voirie, nécessitant une reprise
+                                                complète.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <strong class="task-title">Conception des Plans</strong>
+                                            <span class="task-desc">
+                                                Élaboration des plans de Situation et de Projet (<em>cf : Plan_situation
+                                                    / Plan_projet</em>). J'y ai localisé précisément les zones de
+                                                chaussée à reprendre et ajouté les annotations techniques pour guider
+                                                l'équipe sur le terrain.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <strong class="task-title">Documentation Technique</strong>
+                                            <span class="task-desc">
+                                                Rédaction des fiches techniques (<em>cf : vue_en_plan_travaux</em>)
+                                                définissant les normes de Génie Civil à respecter : réalisation d'un
+                                                enrobé de 6 cm d'épaisseur sur 30 mètres, avec application d'un
+                                                <strong>joint à l'émulsion</strong>. Ce joint (similaire à du silicone
+                                                liquide noir) assure l'étanchéité entre l'ancien et le nouvel enrobé,
+                                                évitant ainsi les fissures dues au gel.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <strong class="task-title">Valorisation Financière (GC)</strong>
+                                            <span class="task-desc">
+                                                Estimation du coût via le catalogue de prix spécifique au <strong>Génie
+                                                    Civil</strong> ("GCD02"), distinct des forfaits réseau classiques.
+                                                J'ai sélectionné le forfait <strong>"REDEX"</strong>, correspondant
+                                                à la réalisation des revêtements de surface.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <strong class="task-title">Commandite</strong>
+                                            <span class="task-desc">
+                                                Transmission du dossier complet (Plans, Vue en plan, Valorisation) au
+                                                prestataire via l'application LINE, déclenchant ainsi la planification
+                                                et l'intervention de l'équipe de voirie.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <strong class="task-title">Suivi & Réception</strong>
+                                            <span class="task-desc">
+                                                Le chantier est actuellement en cours de finalisation. Je suis en
+                                                attente du nouveau "Retour Travaux" pour vérifier la conformité de
+                                                l'enrobé réalisé par rapport à mes prescription.
+                                            </span>
+                                        </li>
+
                                     </ul>
                                 </div>
                                 <div class="content-block">
@@ -658,23 +695,25 @@
                                 <div class="analysis-card">
                                     <div class="analysis-text">
                                         <h4>Auto-analyse & Progression</h4>
-                                        <p>Cette mission de reprise travaux d'enrobé m'a permis de faire mes premiers
-                                            pas dans le domaine du Génie Civil. Ainsi j'ai <strong>pu</strong> découvrir
-                                            les règles d'ingénierie spécifiques au génie civil. Et les forfaits
-                                            spécifiques au GC.</p>
+                                        <p>Cette mission de reprise travaux d'enrobé m'a permis de faire mes premier pas
+                                            dans le domaine du Génie Civil. Ainsi j'ai pue découvrir les regles
+                                            d'ingénierie spécifique au génie civil. Et les forfaits spécifiques au GC.
+                                            Part ailleurs j'ai pue appliquer ce que j'ai appris lors de ma précédente
+                                            mission de reprise travaux.
+                                        </p>
                                         <br>
                                         <p><strong>Difficultés surmontées :</strong><br>J'ai dû faire face à des
-                                            difficultés liées à la compréhension des normes de génie civil qui m'étaient
+                                            difficultés liés à la compréhension des normes de génie civil qui m'étaient
                                             initialement inconnues. De plus, pour la valorisation des travaux, j'ai dû
-                                            m'approprier les spécificités des forfaits contractuels utilisés
-                                            <strong>pour</strong> ce type de chantier (GC).</p>
+                                            m'approprier les spécificités des forfaits contractuels utilisés pour
+                                            ce type de chantier (GC).</p>
                                         <br>
                                         <p><strong>Solutions apportées :</strong><br>Pour combler mes lacunes en génie
                                             civil, j'ai sollicité l'aide de mes collègues et j'ai su être curieux pour
                                             apprendre rapidement et devenir autonome. Concernant la valorisation des
-                                            travaux, j'ai étudié les forfaits qui existent pour le GC afin de réaliser
-                                            une valorisation conforme à la reprise et en demandant
-                                            <strong>conseil</strong> à mes collègues.</p>
+                                            travaux, j'ai étudié les forfait qui existe pour le GC afin de réaliser une
+                                            valorisation conforme au reprise et en demandant conseille à mes collègues.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
